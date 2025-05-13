@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  grobid:
+    image: lfoppiano/grobid:0.8.1
+    container_name: grobid_service
+    ports:
+      - "8070:8070"
+    restart: always
+    init: true
+    ulimits:
+      core: 0
+
+  app:
+    build: .
+    container_name: individual_assessment
+    depends_on:
+      - grobid
+    environment:
+      - GROBID_URL=http://grobid:8070
+    volumes:
+      - ./IndividualAssessment/output:/IndividualAssessment/output
+    command: ["sh", "-c", "until curl -f http://grobid:8070/api/isalive >/dev/null 2>&1; do echo 'Esperando a Grobid...'; sleep 5; done; python main.py; tail -f /dev/null"]
