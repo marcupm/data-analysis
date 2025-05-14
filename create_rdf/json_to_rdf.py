@@ -1,9 +1,9 @@
 import json
 from rdflib import Graph, URIRef, Literal, Namespace
-from rdflib.namespace import RDF, DCTERMS, FOAF
+from rdflib.namespace import RDF, DCTERMS, FOAF, SKOS
 
-# Cargar archivo JSON
-with open("papers_metadata.json", "r", encoding="utf-8") as f:
+# Cargar archivo JSON enriquecido
+with open("papers_with_openalex.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 papers = data["papers"]
@@ -17,6 +17,7 @@ BIBO = Namespace("http://purl.org/ontology/bibo/")
 g.bind("dcterms", DCTERMS)
 g.bind("foaf", FOAF)
 g.bind("bibo", BIBO)
+g.bind("skos", SKOS)
 g.bind("ex", EX)
 
 # Procesar cada paper
@@ -52,6 +53,13 @@ for idx, paper in enumerate(papers):
         g.add((author_uri, FOAF.name, Literal(full_name)))
         g.add((paper_uri, DCTERMS.creator, author_uri))
 
+    # 🧠 Temas desde OpenAlex (topics)
+    for topic in paper.get("openalex_topics", []):
+        topic_uri = URIRef(f"http://example.org/topic/{topic.replace(' ', '_')}")
+        g.add((topic_uri, RDF.type, SKOS.Concept))
+        g.add((topic_uri, SKOS.prefLabel, Literal(topic)))
+        g.add((paper_uri, DCTERMS.subject, topic_uri))
+
 # Guardar RDF
-g.serialize("papers_metadata.ttl", format="turtle")
-print("✅ RDF generado en 'papers_metadata.ttl'")
+g.serialize("papers_with_topics.ttl", format="turtle")
+print("✅ RDF enriquecido con topics guardado en 'papers_with_topics.ttl'")
