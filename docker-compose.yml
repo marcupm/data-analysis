@@ -13,11 +13,11 @@ services:
 
   app:
     build: .
-    container_name: individual_assessment
+    container_name: ExtractPDFMetadata
     depends_on:
       - grobid
     environment:
       - GROBID_URL=http://grobid:8070
     volumes:
-      - ./IndividualAssessment/output:/IndividualAssessment/output
+      - ./ExtractPDFMetadata/output:/ExtractPDFMetadata/output
     command: ["sh", "-c", "until curl -f http://grobid:8070/api/isalive >/dev/null 2>&1; do echo 'Esperando a Grobid...'; sleep 5; done; python main.py; tail -f /dev/null"]

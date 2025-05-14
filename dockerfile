@@ -2,7 +2,7 @@
 FROM python:3.9.13
 
 # Set the working directory inside the container to IndividualAssessment
-WORKDIR /IndividualAssessment
+WORKDIR /ExtractPDFMetadata
 
 # Copy only the dependencies file first (from root/docs)
 COPY docs/requirements.txt /docs/requirements.txt
@@ -11,7 +11,7 @@ COPY docs/requirements.txt /docs/requirements.txt
 RUN pip install --no-cache-dir -r /docs/requirements.txt
 
 # Copy the whole IndividualAssessment folder into the container
-COPY IndividualAssessment /IndividualAssessment
+COPY ExtractPDFMetadata /ExtractPDFMetadata
 
 # Set the default command to run the main script
 CMD ["python", "main.py"]

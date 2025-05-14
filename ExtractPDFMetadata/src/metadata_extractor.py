@@ -3,6 +3,7 @@ import json
 import xml.etree.ElementTree as ET
 import re
 import logging
+import csv  # Importar el módulo CSV
 
 def extract_metadata_from_grobid_output(processed_papers, output_folder):
     """
@@ -149,3 +150,25 @@ def extract_metadata_from_grobid_output(processed_papers, output_folder):
         logging.info(f"Archivo JSON guardado en: {output_file}")
     except Exception as e:
         logging.error(f"Error guardando archivo JSON: {e}")
+
+    # Escribir todos los datos al archivo CSV
+    try:
+        csv_file = os.path.join(output_folder, "papers_metadata.csv")
+        with open(csv_file, 'w', encoding='utf-8', newline='') as f:
+            writer = csv.writer(f)
+            # Escribir encabezados
+            writer.writerow(["filename", "title", "authors", "publicationYear", "publishedIn", "doi", "abstract"])
+            # Escribir datos
+            for paper in papers_data:
+                writer.writerow([
+                    paper["filename"],
+                    paper["title"],
+                    "; ".join([f"{author['firstname']} {author['middlename']} {author['lastname']}".strip() for author in paper["authors"]]),
+                    paper["publicationYear"],
+                    paper["publishedIn"],
+                    paper["doi"],
+                    paper["abstract"]
+                ])
+        logging.info(f"Archivo CSV guardado en: {csv_file}")
+    except Exception as e:
+        logging.error(f"Error guardando archivo CSV: {e}")
