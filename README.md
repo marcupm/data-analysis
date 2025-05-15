@@ -1,125 +1,224 @@
 # AIOSRSE-UPM
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14957145.svg)](https://doi.org/10.5281/zenodo.14957145)
 
-## Description
-This repository contains deliverables related to Artificial Intelligence and Open Science in Research Software Engineering. Currently, it only contains IndividualAssessment, which is a Grobid client that extracts links, generates a word cloud from abstracts, and creates a figure-per-article graph from PDF papers.
 
-## Repository Structure
-```
-AIOSRSE-UPM/
-├── IndividualAssessment/  # Main project folder
-│   ├── data/              # Place your PDF files here
-│   ├── main.py            # Main execution script
-│   └── ...
-└── docs/
-    └── requirements.txt   # Dependencies file
-```
+README NUEVO:
 
-## Requirements
-- Python 3.9.13 or higher
-- A running Grobid service (default: http://localhost:8070)
-- Dependencies listed in docs/requirements.txt
+# Research Paper Analysis Pipeline
+
+## Overview
+
+This project analyzes a corpus of research papers to extract topics, compute similarities, link them in a knowledge graph, and identify funding information. It leverages HuggingFace models and follows best practices for research data management.
+
+## Table of Contents
+
+- Prerequisites
+- Installation
+- Pipeline Steps
+- Component Details
+- Query the Knowledge Graph
+- Research Object & Provenance
+- Directory Structure
+
+## Prerequisites
+
+- Docker and Docker Compose
+- Python 3.9+
+- 30 research papers in PDF format
 
 ## Installation
-Clone the repository:
+
+1. Clone this repository:
+   ```bash
+   git clone url-github
+   cd carpeta creada por el clone
+   ```
+
+2. Install required Python packages:
+   ```bash
+   pip install -r docs/requirements.txt
+   ```
+
+3. Start the GROBID service:
+   ```bash
+   docker-compose up -d
+   ```
+
+4. Place your research papers in the `data/` directory.
+
+## Pipeline Steps
+
+Execute these steps in sequence to process your research papers:
+
+
+docker-compose up ya hace el punto 1. Habria que añadir los demas puntos a docker para que se ejecuten todos en el contenedor con un simple docker-compose up.
+Hay que editar el docker para que haga todo.
+### 1. Extract Metadata from PDFs
+
 ```bash
-   git clone https://github.com/AlRos14/AIOSRSE-UPM.git
-   cd IndividualAssessment
-```
-
-### Local Installation
-Follow these instructions if you want to run the project with a Grobid instance on your local machine.
-
-Create and activate a virtual environment (optional but recommended):
-```bash
-    python3 -m venv env
-    source env/bin/activate  # On Windows: env\Scripts\activate
-```
-
-Install the required dependencies:
-```bash
-    pip install -r docs/requirements.txt
-```
-
-Verify the installation:
-```bash
-    python main.py --help
-```
-
-### Docker Installation
-Follow these instructions if you prefer using Docker without worrying about dependencies or Grobid setup.
-
-Build docker containers with Docker-Compose
-```bash
-    docker-compose up --build
-```
-This will automatically:
-- Set up a Grobid instance
-- Install all required dependencies
-- Configure the project to work with the containerized Grobid
-
-## Execution
-
-### Local Execution
-
-#### Requirements
-It is mandatory to have a running Grobid instance, as this project is essentially a Grobid client.
-Additionally, Python dependencies must be installed from the requirements.txt file.
-
-#### Before running the project
-1. Ensure a Grobid instance is running (by default at http://localhost:8070)
-2. Place your PDF files in the `IndividualAssessment/data` folder
-
-#### Running the Project
-To run the project, use the following command:
-```bash
+cd ExtractPDFMetadata
 python main.py
 ```
 
-### Docker Execution
+This sends PDFs to GROBID for processing and extracts structured metadata.
 
-#### Running the Project
-If you've already built the containers, simply run:
+### 2. Enrich Metadata with OpenAlex Topics
+
 ```bash
-docker-compose up
-```
-#### Stopping the Project
-The Docker containers will run in the background until you stop them:
-```bash
-# Press CTRL+C in the terminal where docker-compose is running
-docker-compose down
+cd ../create_rdf
+python openalex_query.py
 ```
 
-### After running the project
-After execution, an `output` folder will be created inside the IndividualAssessment directory, containing three files:
-- `figures_per_article.png`: A graph showing the number of figures per article
-- `keyword_cloud.png`: A word cloud generated from the abstracts
-- `links.txt`: A list of links extracted from the papers
+This queries the OpenAlex API to retrieve topic information for each paper based on DOIs.
 
-## Running Example(s)
-This is a running example using ten AI-related articles:
+### 3. Create RDF Knowledge Graph
 
-    python main.py       
-    2025-02-18 14:07:58,742 - INFO - Iniciando el análisis de artículos...
-    2025-02-18 14:07:58,742 - INFO - Processing: 2305.04532v2.pdf
-    2025-02-18 14:08:32,068 - INFO - Processing: 2309.05519v3.pdf
-    2025-02-18 14:08:38,456 - INFO - Processing: 2403.09611v4.pdf
-    2025-02-18 14:08:44,838 - INFO - Processing: 2404.17605v1.pdf
-    2025-02-18 14:08:48,925 - INFO - Processing: 31664-Article Text-35728-1-2-20241016.pdf
-    2025-02-18 14:08:51,934 - INFO - Processing: 3649217.3653594.pdf
-    2025-02-18 14:08:55,379 - INFO - Processing: AIp2300031.pdf
-    2025-02-18 14:08:57,199 - INFO - Processing: GPT-4Vision_for_Robotics_Multimodal_Task_Planning_From_Human_Demonstration.pdf
-    2025-02-18 14:09:00,477 - INFO - Processing: GPT_Generative_Pre-Trained_Transformer_A_Comprehensive_Review_on_Enabling_Technologies_Potential_Applications_Emerging_Challenges_and.pdf
-    2025-02-18 14:09:10,667 - INFO - Processing: RTLCoder_Outperforming_GPT-3.5_in_Design_RTL_Generation_with_Our_Open-Source_Dataset_and_Lightweight_Solution.pdf
-    2025-02-18 14:09:15,003 - INFO - Análisis completado. Resultados guardados en la carpeta output/
+```bash
+python json_to_rdf.py
+```
 
-figures_per_article.png:
-![alt text](IndividualAssessment/output/figures_per_article.png)
-keyword_cloud.png:
-![alt text](IndividualAssessment/output/keyword_cloud.png)
-links.txt:
-[links](IndividualAssessment/output/links.txt)
+Converts the enriched metadata into an RDF knowledge graph.
 
-## Preferred Citation
-A citation file is included in this repository. Please refer to the `CITATION.cff` file for proper citation format.
+### 4. Enrich RDF with Wikidata Links
 
+```bash
+python wikidata_enrichment.py
+```
+
+Links entities in the knowledge graph to Wikidata resources.
+
+### 5. Run Topic Modeling on Abstracts
+
+```bash
+cd ../topic_modeling
+python abstract_topics.py
+```
+
+Applies both LDA and BERTopic models to identify research themes in paper abstracts.
+
+### 6. Calculate Paper Similarities
+
+```bash
+cd ../similarity
+python paper_similarity.py
+```
+
+Computes similarity scores between papers using transformer-based embeddings.
+
+### 7. Extract Named Entities from Acknowledgements
+
+```bash
+cd ../ner
+python extract_acknowledgements.py
+```
+
+Identifies funding organizations and other entities in paper acknowledgements.
+
+### 8. Document Data Provenance
+
+```bash
+cd ../provenance
+python create_prov.py
+```
+
+Creates PROV documentation describing the entire workflow.
+
+### 9. Package as Research Object
+
+```bash
+cd ../ro_crate
+python create_ro_crate.py
+```
+
+Packages all research outputs as a standardized Research Object Crate.
+
+## Component Details
+
+### Metadata Extraction
+Uses GROBID to extract structured metadata from PDFs, including titles, authors, abstracts, and references.
+
+### Topic Modeling
+Two approaches:
+- **LDA (Latent Dirichlet Allocation)**: Traditional statistical approach
+- **BERTopic**: Transformer-based approach using HuggingFace models
+
+### Similarity Analysis
+Uses sentence-transformers to create embeddings for each paper abstract, then computes cosine similarity to identify related papers.
+
+### NER Analysis
+Applies Hugging Face's NER models to extract funding organizations and other entities from acknowledgements sections.
+
+### Knowledge Graph Creation
+Converts extracted information into RDF format, linking papers with:
+- Authors
+- Topics
+- Publication details
+- External resources (Wikidata)
+
+## Query the Knowledge Graph
+
+Start the SPARQL endpoint:
+
+```bash
+cd create_rdf
+python sparql_endpoint.py
+```
+
+Visit http://localhost:5000 in your browser to query the knowledge graph.
+
+Example queries:
+- Find papers by topic
+- Identify collaborating authors
+- Discover funding patterns
+
+You can also use the API:
+
+```bash
+cd create_rdf
+python api.py
+```
+
+Visit http://localhost:5001/api/papers to access the REST API.
+
+## Research Object & Provenance
+
+The pipeline creates:
+
+1. **PROV Documentation**: Captures the entire analysis workflow with detailed provenance information
+2. **Research Object Crate**: Packages all research outputs following RO-Crate 1.1 standards
+
+## Directory Structure
+
+```
+research-paper-analysis/
+├── data/                      # Raw PDF papers 
+├── ExtractPDFMetadata/        # PDF extraction components
+│   ├── src/
+│   │   ├── grobid_client.py   # Client for GROBID service
+│   │   └── metadata_extractor.py # Extract metadata from GROBID output
+│   └── main.py                # Main extraction script
+├── create_rdf/                # Knowledge graph creation
+│   ├── json_to_rdf.py         # Convert JSON to RDF
+│   ├── openalex_query.py      # Query OpenAlex API
+│   ├── sparql_endpoint.py     # SPARQL query interface
+│   ├── api.py                 # REST API for data access
+│   └── wikidata_enrichment.py # Wikidata entity linking
+├── topic_modeling/            # Topic analysis
+│   └── abstract_topics.py     # Topic modeling on abstracts
+├── similarity/                # Similarity analysis
+│   └── paper_similarity.py    # Calculate paper similarities
+├── ner/                       # Named entity recognition
+│   └── extract_acknowledgements.py # Extract entities from acknowledgements
+├── provenance/                # Provenance documentation
+│   └── create_prov.py         # Create PROV documentation
+└── ro_crate/                  # Research Object packaging
+    └── create_ro_crate.py     # Create RO-Crate metadata
+```
+
+## Model Decisions
+
+- **GROBID**: Specialized for scientific document processing
+- **Transformer Models**: State-of-the-art for text understanding
+- **BERTopic**: Combines transformers with topic modeling
+- **RDF**: Standard format for knowledge graphs with reasoning capabilities
+- **PROV & RO-Crate**: Follow FAIR data principles for reproducibility
