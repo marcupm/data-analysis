@@ -10,3 +10,11 @@ services:
     init: true
     ulimits:
       core: 0
+  provenance_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: provenance_service
+    command: ["python", "provenance/create_prov.py"]
+    depends_on:
+      - grobid
