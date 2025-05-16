@@ -5,7 +5,7 @@ from rdflib import Graph, URIRef, Literal, Namespace
 from rdflib.namespace import RDF, DCTERMS, FOAF, SKOS, OWL
 
 # Cargar archivo JSON enriquecido
-with open("papers_with_openalex.json", "r", encoding="utf-8") as f:
+with open("output/papers_with_openalex.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 papers = data["papers"]
@@ -65,8 +65,8 @@ for idx, paper in enumerate(papers):
         g.add((paper_uri, DCTERMS.subject, topic_uri))
 
 # Guardar RDF
-g.serialize("papers_with_topics.ttl", format="turtle")
-print("✅ RDF enriquecido con topics guardado en 'papers_with_topics.ttl'")
+g.serialize("output/papers_with_topics.ttl", format="turtle")
+print("✅ RDF enriquecido con topics guardado en 'output/papers_with_topics.ttl'")
 
 def query_wikidata(search_term, entity_type=None):
     """
@@ -155,4 +155,4 @@ def enrich_rdf_with_wikidata(input_file, output_file):
     print(f"Enriched RDF saved to {output_file}")
 
 if __name__ == "__main__":
-    enrich_rdf_with_wikidata("papers_with_topics.ttl", "papers_wikidata_enriched.ttl")
+    enrich_rdf_with_wikidata("output/papers_with_topics.ttl", "output/papers_wikidata_enriched.ttl")

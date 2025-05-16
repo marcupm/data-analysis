@@ -8,7 +8,7 @@ import os
 
 def load_papers():
     """Load paper data from JSON file"""
-    with open("../create_rdf/papers_with_openalex.json", "r", encoding="utf-8") as f:
+    with open("../create_rdf/output/papers_with_openalex.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     return data["papers"]
 

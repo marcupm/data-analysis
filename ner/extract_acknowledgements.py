@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 def load_papers():
     """Load paper data from JSON file"""
-    with open("../create_rdf/papers_with_openalex.json", "r", encoding="utf-8") as f:
+    with open("../create_rdf/output/papers_with_openalex.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     return data["papers"]
 
@@ -14,7 +14,7 @@ def load_papers():
 def load_papers_with_grobid():
     """Load papers with GROBID XML if available"""
     # Load papers metadata
-    with open("../create_rdf/papers_with_openalex.json", "r", encoding="utf-8") as f:
+    with open("../create_rdf/output/papers_with_openalex.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     papers = data["papers"]
     

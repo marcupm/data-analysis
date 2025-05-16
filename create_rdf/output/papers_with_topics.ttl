@@ -1,0 +1,1068 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:paper0 a bibo:Document ;
+    dcterms:creator ex:author_0_0,
+        ex:author_0_1,
+        ex:author_0_10,
+        ex:author_0_2,
+        ex:author_0_3,
+        ex:author_0_4,
+        ex:author_0_5,
+        ex:author_0_6,
+        ex:author_0_7,
+        ex:author_0_8,
+        ex:author_0_9 ;
+    dcterms:issued "2023" ;
+    dcterms:publisher "Frontiers in Endocrinology" ;
+    dcterms:subject <http://example.org/topic/Maternal_and_fetal_healthcare>,
+        <http://example.org/topic/Pregnancy_and_preeclampsia_studies>,
+        <http://example.org/topic/Preterm_Birth_and_Chorioamnionitis> ;
+    dcterms:title "Machine learning applied in maternal and fetal health: a narrative review focused on pregnancy diseases and complications" ;
+    bibo:doi "10.3389/fendo.2023.1130139" .
+
+ex:paper1 a bibo:Document ;
+    dcterms:creator ex:author_1_0,
+        ex:author_1_1,
+        ex:author_1_2,
+        ex:author_1_3,
+        ex:author_1_4,
+        ex:author_1_5 ;
+    dcterms:issued "2024" ;
+    dcterms:publisher "World Journal of Advanced Research and Reviews" ;
+    dcterms:subject <http://example.org/topic/Computational_Drug_Discovery_Methods>,
+        <http://example.org/topic/Genetics,_Bioinformatics,_and_Biomedical_Research> ;
+    dcterms:title "Machine learning&apos;s role in personalized medicine &amp; treatment optimization" ;
+    bibo:doi "10.30574/wjarr.2024.21.2.0641" .
+
+ex:paper10 a bibo:Document ;
+    dcterms:creator ex:author_10_0 ;
+    dcterms:issued "2018" ;
+    dcterms:publisher "Journal of Health &amp; Medical Informatics" ;
+    dcterms:subject <http://example.org/topic/Artificial_Intelligence_in_Healthcare_and_Education> ;
+    dcterms:title "Application of Machine and Deep Learning Algorithms in Intelligent Clinical Decision Support Systems in Healthcare" ;
+    bibo:doi "10.4172/2157-7420.1000321" .
+
+ex:paper11 a bibo:Document ;
+    dcterms:creator ex:author_11_0,
+        ex:author_11_1,
+        ex:author_11_2,
+        ex:author_11_3 ;
+    dcterms:issued "2018" ;
+    dcterms:publisher "Pharmacology Research &amp; Perspectives" ;
+    dcterms:subject <http://example.org/topic/Blood_Pressure_and_Hypertension_Studies>,
+        <http://example.org/topic/Hormonal_Regulation_and_Hypertension>,
+        <http://example.org/topic/Lipoproteins_and_Cardiovascular_Health> ;
+    dcterms:title "Machine learning of big data in gaining insight into successful treatment of hypertension" ;
+    bibo:doi "10.1002/prp2.396" .
+
+ex:paper12 a bibo:Document ;
+    dcterms:creator ex:author_12_0,
+        ex:author_12_1 ;
+    dcterms:issued "2024" ;
+    dcterms:publisher "International Journal of Innovative Science and Research Technology (IJISRT)" ;
+    dcterms:subject <http://example.org/topic/Artificial_Intelligence_in_Healthcare_and_Education>,
+        <http://example.org/topic/Biomedical_and_Engineering_Education>,
+        <http://example.org/topic/Genetics,_Bioinformatics,_and_Biomedical_Research> ;
+    dcterms:title "The Transformative Impact of Deep Learning on Personalized Medicine" ;
+    bibo:doi "10.38124/ijisrt/ijisrt24may1593" .
+
+ex:paper13 a bibo:Document ;
+    dcterms:creator ex:author_13_0,
+        ex:author_13_1,
+        ex:author_13_2,
+        ex:author_13_3 ;
+    dcterms:issued "2021" ;
+    dcterms:publisher "Current Genomics" ;
+    dcterms:subject <http://example.org/topic/Cancer_Genomics_and_Diagnostics>,
+        <http://example.org/topic/Computational_Drug_Discovery_Methods>,
+        <http://example.org/topic/Gene_expression_and_cancer_classification> ;
+    dcterms:title "Big Data to Knowledge: Application of Machine Learning to Predictive Modeling of Therapeutic Response in Cancer" ;
+    bibo:doi "10.2174/1389202921999201224110101" .
+
+ex:paper14 a bibo:Document ;
+    dcterms:creator ex:author_14_0 ;
+    dcterms:issued "2018" ;
+    dcterms:publisher "Human Molecular Genetics" ;
+    dcterms:subject <http://example.org/topic/Cancer_Genomics_and_Diagnostics>,
+        <http://example.org/topic/Genetic_Associations_and_Epidemiology>,
+        <http://example.org/topic/Genomics_and_Rare_Diseases> ;
+    dcterms:title "DeepHealth: Deep Learning for Health Informatics reviews, challenges, and opportunities on medical imaging, electronic health records, genomics, sensing, and online communication health" ;
+    bibo:doi "10.1093/hmg/ddy088" .
+
+ex:paper15 a bibo:Document ;
+    dcterms:creator ex:author_15_0,
+        ex:author_15_1,
+        ex:author_15_2,
+        ex:author_15_3,
+        ex:author_15_4,
+        ex:author_15_5,
+        ex:author_15_6,
+        ex:author_15_7,
+        ex:author_15_8 ;
+    dcterms:issued "2012" ;
+    dcterms:publisher "Invest Ophthalmol Vis Sci" ;
+    dcterms:subject <http://example.org/topic/AI_in_cancer_detection>,
+        <http://example.org/topic/Cell_Image_Analysis_Techniques>,
+        <http://example.org/topic/Digital_Imaging_for_Blood_Diseases> ;
+    dcterms:title "A Survey on Deep Learning in Medical Image Analysis" ;
+    bibo:doi "10.1109/TMI.2015.2476509" .
+
+ex:paper16 a bibo:Document ;
+    dcterms:creator ex:author_16_0,
+        ex:author_16_1,
+        ex:author_16_2 ;
+    dcterms:issued "2017" ;
+    dcterms:publisher "International Journal of Computer (IJC)" ;
+    dcterms:title "Recent Applications of Deep Learning Algorithms in Medical Image Analysis" ;
+    bibo:doi "arXiv:arXiv:1804.03683" .
+
+ex:paper17 a bibo:Document ;
+    dcterms:creator ex:author_17_0,
+        ex:author_17_1,
+        ex:author_17_2,
+        ex:author_17_3,
+        ex:author_17_4 ;
+    dcterms:issued "2017" ;
+    dcterms:publisher "Medical Image Analysis" ;
+    dcterms:subject <http://example.org/topic/AI_in_cancer_detection>,
+        <http://example.org/topic/Medical_Imaging_and_Analysis>,
+        <http://example.org/topic/Radiomics_and_Machine_Learning_in_Medical_Imaging> ;
+    dcterms:title "Artificial Intelligence In Healthcare: A Review Of Deep Learning Models For Medical Image Analysis" ;
+    bibo:doi "10.1016/j.media.2017.07.005" .
+
+ex:paper18 a bibo:Document ;
+    dcterms:creator ex:author_18_0,
+        ex:author_18_1,
+        ex:author_18_2,
+        ex:author_18_3 ;
+    dcterms:issued "2022" ;
+    dcterms:publisher "Journal of Thoracic Oncology" ;
+    dcterms:subject <http://example.org/topic/Cancer_Genomics_and_Diagnostics>,
+        <http://example.org/topic/Genomics_and_Phylogenetic_Studies>,
+        <http://example.org/topic/RNA_modifications_and_cancer> ;
+    dcterms:title "Genie Out of the Bottle: Is There a Role for Gene-Gene Interactions in Early Detection of Lung Cancer?" ;
+    bibo:doi "10.1016/j.jtho.2022.05.012" .
+
+ex:paper19 a bibo:Document ;
+    dcterms:creator ex:author_19_0,
+        ex:author_19_1 ;
+    dcterms:issued "2022" ;
+    dcterms:publisher "The Spine Journal" ;
+    dcterms:subject <http://example.org/topic/Artificial_Intelligence_in_Healthcare_and_Education>,
+        <http://example.org/topic/COVID-19_diagnosis_using_AI>,
+        <http://example.org/topic/Machine_Learning_in_Healthcare> ;
+    dcterms:title "Sharpening the resolution on data matters: a brief roadmap for understanding deep learning for medical data" ;
+    bibo:doi "10.1016/j.spinee.2020.08.012" .
+
+ex:paper2 a bibo:Document ;
+    dcterms:creator ex:author_2_0,
+        ex:author_2_1,
+        ex:author_2_2,
+        ex:author_2_3,
+        ex:author_2_4 ;
+    dcterms:issued "2017" ;
+    dcterms:publisher "Briefings in Bioinformatics" ;
+    dcterms:subject <http://example.org/topic/Artificial_Intelligence_in_Healthcare>,
+        <http://example.org/topic/Biomedical_Text_Mining_and_Ontologies>,
+        <http://example.org/topic/Machine_Learning_in_Healthcare> ;
+    dcterms:title "Deep learning for healthcare: review, opportunities and challenges" ;
+    bibo:doi "10.1093/bib/bbx044" .
+
+ex:paper20 a bibo:Document ;
+    dcterms:creator ex:author_20_0,
+        ex:author_20_1,
+        ex:author_20_10,
+        ex:author_20_11,
+        ex:author_20_12,
+        ex:author_20_13,
+        ex:author_20_2,
+        ex:author_20_3,
+        ex:author_20_4,
+        ex:author_20_5,
+        ex:author_20_6,
+        ex:author_20_7,
+        ex:author_20_8,
+        ex:author_20_9 ;
+    dcterms:issued "2020" ;
+    dcterms:publisher "Briefings in Bioinformatics" ;
+    dcterms:subject <http://example.org/topic/Bioinformatics_and_Genomic_Networks>,
+        <http://example.org/topic/Health,_Environment,_Cognitive_Aging>,
+        <http://example.org/topic/Machine_Learning_in_Healthcare> ;
+    dcterms:title "Deep learning in systems medicine" ;
+    bibo:doi "10.1093/bib/bbaa237" .
+
+ex:paper21 a bibo:Document ;
+    dcterms:creator ex:author_21_0,
+        ex:author_21_1,
+        ex:author_21_2,
+        ex:author_21_3,
+        ex:author_21_4 ;
+    dcterms:issued "2024" ;
+    dcterms:publisher "Clinical Pharmacology &amp; Therapeutics" ;
+    dcterms:subject <http://example.org/topic/Advanced_Causal_Inference_Techniques>,
+        <http://example.org/topic/Health_Systems,_Economic_Evaluations,_Quality_of_Life>,
+        <http://example.org/topic/Statistical_Methods_and_Inference> ;
+    dcterms:title "Using Machine Learning to Individualize Treatment Effect Estimation: Challenges and Opportunities" ;
+    bibo:doi "10.1002/cpt.3159" .
+
+ex:paper22 a bibo:Document ;
+    dcterms:creator ex:author_22_0,
+        ex:author_22_1,
+        ex:author_22_2,
+        ex:author_22_3 ;
+    dcterms:issued "2021" ;
+    dcterms:publisher "Frontiers in Pharmacology" ;
+    dcterms:subject <http://example.org/topic/Inflammatory_Bowel_Disease>,
+        <http://example.org/topic/Rheumatoid_Arthritis_Research_and_Therapies>,
+        <http://example.org/topic/Systemic_Lupus_Erythematosus_Research> ;
+    dcterms:title "Machine Learning Techniques for Personalised Medicine Approaches in Immune-Mediated Chronic Inflammatory Diseases: Applications and Challenges" ;
+    bibo:doi "10.3389/fphar.2021.720694" .
+
+ex:paper23 a bibo:Document ;
+    dcterms:creator ex:author_23_0,
+        ex:author_23_1,
+        ex:author_23_2,
+        ex:author_23_3,
+        ex:author_23_4,
+        ex:author_23_5,
+        ex:author_23_6 ;
+    dcterms:issued "2019" ;
+    dcterms:publisher "Neurospine" ;
+    dcterms:subject <http://example.org/topic/AI_in_cancer_detection>,
+        <http://example.org/topic/COVID-19_diagnosis_using_AI>,
+        <http://example.org/topic/Radiomics_and_Machine_Learning_in_Medical_Imaging> ;
+    dcterms:title "Deep Learning in Medical Imaging" ;
+    bibo:doi "10.14245/ns.1938396.198" .
+
+ex:paper24 a bibo:Document ;
+    dcterms:creator ex:author_24_0,
+        ex:author_24_1 ;
+    dcterms:issued "2024" ;
+    dcterms:publisher "Circulation" ;
+    dcterms:title "Deep Learning in Cardiology" ;
+    bibo:doi "10.1109/RBME.2018.2885714/$33.00" .
+
+ex:paper25 a bibo:Document ;
+    dcterms:creator ex:author_25_0,
+        ex:author_25_1,
+        ex:author_25_2 ;
+    dcterms:issued "2019" ;
+    dcterms:publisher "The Pharma Innovation" ;
+    dcterms:subject <http://example.org/topic/Bioinformatics_and_Genomic_Networks>,
+        <http://example.org/topic/Genetics,_Bioinformatics,_and_Biomedical_Research>,
+        <http://example.org/topic/Health,_Environment,_Cognitive_Aging> ;
+    dcterms:title "Machine learning for personalized medicine: Tailoring treatment strategies through data analysis" ;
+    bibo:doi "10.22271/tpi.2019.v8.i3sa.25249" .
+
+ex:paper26 a bibo:Document ;
+    dcterms:creator ex:author_26_0,
+        ex:author_26_1,
+        ex:author_26_2,
+        ex:author_26_3,
+        ex:author_26_4,
+        ex:author_26_5,
+        ex:author_26_6 ;
+    dcterms:issued "2017" ;
+    dcterms:publisher "Korean Journal of Radiology" ;
+    dcterms:subject <http://example.org/topic/AI_in_cancer_detection>,
+        <http://example.org/topic/COVID-19_diagnosis_using_AI>,
+        <http://example.org/topic/Radiomics_and_Machine_Learning_in_Medical_Imaging> ;
+    dcterms:title "Deep Learning in Medical Imaging: General Overview" ;
+    bibo:doi "10.3348/kjr.2017.18.4.570" .
+
+ex:paper27 a bibo:Document ;
+    dcterms:creator ex:author_27_0,
+        ex:author_27_1,
+        ex:author_27_2,
+        ex:author_27_3 ;
+    dcterms:issued "2023" ;
+    dcterms:publisher "Journal of Computer Networks, Architecture and High Performance Computing" ;
+    dcterms:subject <http://example.org/topic/Artificial_Intelligence_in_Healthcare_and_Education> ;
+    dcterms:title "Revolutionizing Healthcare: How Deep Learning is poised to Change the Landscape of Medical Diagnosis and Treatment" ;
+    bibo:doi "10.47709/cnahpc.v5i2.2350" .
+
+ex:paper28 a bibo:Document ;
+    dcterms:creator ex:author_28_0,
+        ex:author_28_1 ;
+    dcterms:issued "2024" ;
+    dcterms:publisher "Universal Research Reports" ;
+    dcterms:subject <http://example.org/topic/AI_in_cancer_detection>,
+        <http://example.org/topic/Radiomics_and_Machine_Learning_in_Medical_Imaging> ;
+    dcterms:title "Artificial Intelligence in Medical Imaging: Applications of Deep Learning for Disease Detection and Diagnosis" ;
+    bibo:doi "10.36676/urr.v11.i3.1284" .
+
+ex:paper29 a bibo:Document ;
+    dcterms:creator ex:author_29_0,
+        ex:author_29_1,
+        ex:author_29_2 ;
+    dcterms:issued "2017" ;
+    dcterms:publisher "Medwave Revista Biomédica Revisada por Pares" ;
+    dcterms:title "Machine learning y el control de hipertensión arterial" .
+
+ex:paper3 a bibo:Document ;
+    dcterms:creator ex:author_3_0,
+        ex:author_3_1,
+        ex:author_3_2,
+        ex:author_3_3 ;
+    dcterms:issued "2016" ;
+    dcterms:publisher "The Journal of Thoracic and Cardiovascular Surgery" ;
+    dcterms:subject <http://example.org/topic/Lung_Cancer_Diagnosis_and_Treatment>,
+        <http://example.org/topic/Lung_Cancer_Treatments_and_Mutations>,
+        <http://example.org/topic/Radiomics_and_Machine_Learning_in_Medical_Imaging> ;
+    dcterms:title "Large clinical databases for the study of lung cancer: Making up for the failure of randomized trials" ;
+    bibo:doi "10.1016/j.jtcvs.2015.08.110" .
+
+ex:paper4 a bibo:Document ;
+    dcterms:creator ex:author_4_0,
+        ex:author_4_1 ;
+    dcterms:issued "2021" ;
+    dcterms:publisher "Clinical Pharmacology &amp; Therapeutics" ;
+    dcterms:subject <http://example.org/topic/Antibiotics_Pharmacokinetics_and_Efficacy>,
+        <http://example.org/topic/Renal_Transplantation_Outcomes_and_Treatments>,
+        <http://example.org/topic/Statistical_Methods_in_Clinical_Trials> ;
+    dcterms:title "Machine Learning as a Novel Method to Support Therapeutic Drug Management and Precision Dosing" ;
+    bibo:doi "10.1002/cpt.2326" .
+
+ex:paper5 a bibo:Document ;
+    dcterms:creator ex:author_5_0,
+        ex:author_5_1,
+        ex:author_5_2,
+        ex:author_5_3,
+        ex:author_5_4,
+        ex:author_5_5,
+        ex:author_5_6,
+        ex:author_5_7 ;
+    dcterms:title "Attention Is All You Need" .
+
+ex:paper6 a bibo:Document ;
+    dcterms:creator ex:author_6_0,
+        ex:author_6_1,
+        ex:author_6_2 ;
+    dcterms:issued "2013" ;
+    dcterms:publisher "Nature" ;
+    dcterms:title "Deep Learning in Medical Image Analysis" ;
+    bibo:doi "10.1146/annurev-bioeng-071516-" .
+
+ex:paper7 a bibo:Document ;
+    dcterms:creator ex:author_7_0,
+        ex:author_7_1,
+        ex:author_7_2,
+        ex:author_7_3,
+        ex:author_7_4 ;
+    dcterms:issued "2020" ;
+    dcterms:publisher "Applied Sciences" ;
+    dcterms:subject <http://example.org/topic/Artificial_Intelligence_in_Healthcare>,
+        <http://example.org/topic/COVID-19_diagnosis_using_AI>,
+        <http://example.org/topic/Machine_Learning_in_Healthcare> ;
+    dcterms:title "Machine Learning Applied to Diagnosis of Human Diseases: A Systematic Review" ;
+    bibo:doi "10.3390/app10155135" .
+
+ex:paper8 a bibo:Document ;
+    dcterms:creator ex:author_8_0,
+        ex:author_8_1,
+        ex:author_8_10,
+        ex:author_8_11,
+        ex:author_8_12,
+        ex:author_8_13,
+        ex:author_8_14,
+        ex:author_8_15,
+        ex:author_8_16,
+        ex:author_8_17,
+        ex:author_8_18,
+        ex:author_8_19,
+        ex:author_8_2,
+        ex:author_8_20,
+        ex:author_8_21,
+        ex:author_8_22,
+        ex:author_8_23,
+        ex:author_8_24,
+        ex:author_8_25,
+        ex:author_8_26,
+        ex:author_8_27,
+        ex:author_8_28,
+        ex:author_8_29,
+        ex:author_8_3,
+        ex:author_8_30,
+        ex:author_8_31,
+        ex:author_8_32,
+        ex:author_8_33,
+        ex:author_8_34,
+        ex:author_8_35,
+        ex:author_8_4,
+        ex:author_8_5,
+        ex:author_8_6,
+        ex:author_8_7,
+        ex:author_8_8,
+        ex:author_8_9 ;
+    dcterms:issued "2025" ;
+    dcterms:publisher "Journal of The Royal Society Interface" ;
+    dcterms:subject <http://example.org/topic/AI_in_cancer_detection>,
+        <http://example.org/topic/Cell_Image_Analysis_Techniques>,
+        <http://example.org/topic/Genetics,_Bioinformatics,_and_Biomedical_Research> ;
+    dcterms:title "Opportunities and obstacles for deep learning in biology and medicine" ;
+    bibo:doi "10.1098/rsif.2017.0387" .
+
+ex:paper9 a bibo:Document ;
+    dcterms:creator ex:author_9_0,
+        ex:author_9_1,
+        ex:author_9_2,
+        ex:author_9_3,
+        ex:author_9_4,
+        ex:author_9_5,
+        ex:author_9_6,
+        ex:author_9_7,
+        ex:author_9_8 ;
+    dcterms:issued "2018" ;
+    dcterms:publisher "Genomics, Proteomics &amp; Bioinformatics" ;
+    dcterms:subject <http://example.org/topic/AI_in_cancer_detection>,
+        <http://example.org/topic/Cell_Image_Analysis_Techniques>,
+        <http://example.org/topic/Machine_Learning_in_Bioinformatics> ;
+    dcterms:title "Deep Learning and Its Applications in Biomedicine" ;
+    bibo:doi "10.1016/j.gpb.2017.07.003" .
+
+ex:author_0_0 a foaf:Person ;
+    foaf:name "Daniela Mennickent" .
+
+ex:author_0_1 a foaf:Person ;
+    foaf:name "Andrés Rodríguez" .
+
+ex:author_0_10 a foaf:Person ;
+    foaf:name "Juan Araya" .
+
+ex:author_0_2 a foaf:Person ;
+    foaf:name "Ma. Cecilia Opazo" .
+
+ex:author_0_3 a foaf:Person ;
+    foaf:name "Claudia A Riedel" .
+
+ex:author_0_4 a foaf:Person ;
+    foaf:name "Erica Castro" .
+
+ex:author_0_5 a foaf:Person ;
+    foaf:name "Alma Eriz-Salinas" .
+
+ex:author_0_6 a foaf:Person ;
+    foaf:name "Javiera Appel-Rubio" .
+
+ex:author_0_7 a foaf:Person ;
+    foaf:name "Claudio Aguayo" .
+
+ex:author_0_8 a foaf:Person ;
+    foaf:name "Alicia E Damiano" .
+
+ex:author_0_9 a foaf:Person ;
+    foaf:name "Enrique Guzmán-Gutiérrez" .
+
+ex:author_10_0 a foaf:Person ;
+    foaf:name "Jong Taek Kim" .
+
+ex:author_11_0 a foaf:Person ;
+    foaf:name "Gideon Koren" .
+
+ex:author_11_1 a foaf:Person ;
+    foaf:name "Galia Nordon" .
+
+ex:author_11_2 a foaf:Person ;
+    foaf:name "Kira Radinsky" .
+
+ex:author_11_3 a foaf:Person ;
+    foaf:name "Varda Shalev" .
+
+ex:author_12_0 a foaf:Person ;
+    foaf:name "Prathamesh Gujjeti" .
+
+ex:author_12_1 a foaf:Person ;
+    foaf:name "Anjali Pal" .
+
+ex:author_13_0 a foaf:Person ;
+    foaf:name "Sukanya Panja" .
+
+ex:author_13_1 a foaf:Person ;
+    foaf:name "Sarra Rahem" .
+
+ex:author_13_2 a foaf:Person ;
+    foaf:name "Cassandra J Chu" .
+
+ex:author_13_3 a foaf:Person ;
+    foaf:name "Antonina Mitrofanova" .
+
+ex:author_14_0 a foaf:Person ;
+    foaf:name "Gloria Hyun-Jung Kwak" .
+
+ex:author_15_0 a foaf:Person ;
+    foaf:name "Geert Litjens" .
+
+ex:author_15_1 a foaf:Person ;
+    foaf:name "Thijs Kooi" .
+
+ex:author_15_2 a foaf:Person ;
+    foaf:name "Babak Ehteshami Bejnordi" .
+
+ex:author_15_3 a foaf:Person ;
+    foaf:name "Arnaud Arindra" .
+
+ex:author_15_4 a foaf:Person ;
+    foaf:name "Adiyoso Setio" .
+
+ex:author_15_5 a foaf:Person ;
+    foaf:name "Francesco Ciompi" .
+
+ex:author_15_6 a foaf:Person ;
+    foaf:name "Mohsen Ghafoorian" .
+
+ex:author_15_7 a foaf:Person ;
+    foaf:name "Jeroen A W M Van Der Laak" .
+
+ex:author_15_8 a foaf:Person ;
+    foaf:name "Bram Van Ginneken" .
+
+ex:author_16_0 a foaf:Person ;
+    foaf:name "Arman Sarraf" .
+
+ex:author_16_1 a foaf:Person ;
+    foaf:name "Ali Esmaeilnia Jalali" .
+
+ex:author_16_2 a foaf:Person ;
+    foaf:name "Javad Ghaffari" .
+
+ex:author_17_0 a foaf:Person ;
+    foaf:name "S Jayasankari" .
+
+ex:author_17_1 a foaf:Person ;
+    foaf:name "S D Govardhan" .
+
+ex:author_17_2 a foaf:Person ;
+    foaf:name "Neha Pradyumna Bora" .
+
+ex:author_17_3 a foaf:Person ;
+    foaf:name "Ramesh Kumar" .
+
+ex:author_17_4 a foaf:Person ;
+    foaf:name "V Saravanan" .
+
+ex:author_18_0 a foaf:Person ;
+    foaf:name "Matthew P Smeltzer" .
+
+ex:author_18_1 a foaf:Person ;
+    foaf:name "Meredith A Ray" .
+
+ex:author_18_2 a foaf:Person ;
+    foaf:name "Nicholas R Faris" .
+
+ex:author_18_3 a foaf:Person ;
+    foaf:name "Raymond U Osarogiagbon" .
+
+ex:author_19_0 a foaf:Person ;
+    foaf:name "Allen Schmaltz" .
+
+ex:author_19_1 a foaf:Person ;
+    foaf:name "Andrew L Beam" .
+
+ex:author_1_0 a foaf:Person ;
+    foaf:name "Deepak Kumar" .
+
+ex:author_1_1 a foaf:Person ;
+    foaf:name "Priyanka Pramod Pawar" .
+
+ex:author_1_2 a foaf:Person ;
+    foaf:name "Hari Gonaygunta" .
+
+ex:author_1_3 a foaf:Person ;
+    foaf:name "Geeta Sandeep Nadella" .
+
+ex:author_1_4 a foaf:Person ;
+    foaf:name "Karthik Meduri" .
+
+ex:author_1_5 a foaf:Person ;
+    foaf:name "Shoumya Singh" .
+
+ex:author_20_0 a foaf:Person ;
+    foaf:name "Haiying Wang" .
+
+ex:author_20_1 a foaf:Person ;
+    foaf:name "Estelle Pujos-Guillot" .
+
+ex:author_20_10 a foaf:Person ;
+    foaf:name "Tiago De Melo Malaquias" .
+
+ex:author_20_11 a foaf:Person ;
+    foaf:name "Massimiliano Zanin" .
+
+ex:author_20_12 a foaf:Person ;
+    foaf:name "Taranjit Singh Rai" .
+
+ex:author_20_13 a foaf:Person ;
+    foaf:name "Huiru Zheng" .
+
+ex:author_20_2 a foaf:Person ;
+    foaf:name "Blandine Comte" .
+
+ex:author_20_3 a foaf:Person ;
+    foaf:name "Joao Luis De Miranda" .
+
+ex:author_20_4 a foaf:Person ;
+    foaf:name "Vojtech Spiwok" .
+
+ex:author_20_5 a foaf:Person ;
+    foaf:name "Ivan Chorbev" .
+
+ex:author_20_6 a foaf:Person ;
+    foaf:name "Filippo Castiglione" .
+
+ex:author_20_7 a foaf:Person ;
+    foaf:name "Paolo Tieri" .
+
+ex:author_20_8 a foaf:Person ;
+    foaf:name "Steven Watterson" .
+
+ex:author_20_9 a foaf:Person ;
+    foaf:name "Roisin Mcallister" .
+
+ex:author_21_0 a foaf:Person ;
+    foaf:name "Alicia Curth" .
+
+ex:author_21_1 a foaf:Person ;
+    foaf:name "Richard W Peck" .
+
+ex:author_21_2 a foaf:Person ;
+    foaf:name "Eoin Mckinney" .
+
+ex:author_21_3 a foaf:Person ;
+    foaf:name "James Weatherall" .
+
+ex:author_21_4 a foaf:Person ;
+    foaf:name "Mihaela Van Der Schaar" .
+
+ex:author_22_0 a foaf:Person ;
+    foaf:name "Junjie Peng" .
+
+ex:author_22_1 a foaf:Person ;
+    foaf:name "Elizabeth C Jury" .
+
+ex:author_22_2 a foaf:Person ;
+    foaf:name "Pierre Dönnes" .
+
+ex:author_22_3 a foaf:Person ;
+    foaf:name "Coziana Ciurtin" .
+
+ex:author_23_0 a foaf:Person ;
+    foaf:name "Mingyu Kim" .
+
+ex:author_23_1 a foaf:Person ;
+    foaf:name "Jihye Yun" .
+
+ex:author_23_2 a foaf:Person ;
+    foaf:name "Yongwon Cho" .
+
+ex:author_23_3 a foaf:Person ;
+    foaf:name "Keewon Shin" .
+
+ex:author_23_4 a foaf:Person ;
+    foaf:name "Ryoungwoo Jang" .
+
+ex:author_23_5 a foaf:Person ;
+    foaf:name "Hyun-Jin Bae" .
+
+ex:author_23_6 a foaf:Person ;
+    foaf:name "Namkug Kim" .
+
+ex:author_24_0 a foaf:Person ;
+    foaf:name "Paschalis Bizopoulos" .
+
+ex:author_24_1 a foaf:Person ;
+    foaf:name "Dimitrios Koutsouris" .
+
+ex:author_25_0 a foaf:Person ;
+    foaf:name "Pradeep Verma" .
+
+ex:author_25_1 a foaf:Person ;
+    foaf:name "Nikhil Mishra" .
+
+ex:author_25_2 a foaf:Person ;
+    foaf:name "Vishal Srivastava" .
+
+ex:author_26_0 a foaf:Person ;
+    foaf:name "June-Goo Lee" .
+
+ex:author_26_1 a foaf:Person ;
+    foaf:name "Sanghoon Jun" .
+
+ex:author_26_2 a foaf:Person ;
+    foaf:name "Young-Won Cho" .
+
+ex:author_26_3 a foaf:Person ;
+    foaf:name "Hyunna Lee" .
+
+ex:author_26_4 a foaf:Person ;
+    foaf:name "Guk Bae Kim" .
+
+ex:author_26_5 a foaf:Person ;
+    foaf:name "Joon Beom Seo" .
+
+ex:author_26_6 a foaf:Person ;
+    foaf:name "Namkug Kim" .
+
+ex:author_27_0 a foaf:Person ;
+    foaf:name "Ahsan Ahmad" .
+
+ex:author_27_1 a foaf:Person ;
+    foaf:name "Aftab Tariq" .
+
+ex:author_27_2 a foaf:Person ;
+    foaf:name "Hafiz Khawar Hussain" .
+
+ex:author_27_3 a foaf:Person ;
+    foaf:name "Ahmad Yousaf Gill" .
+
+ex:author_28_0 a foaf:Person ;
+    foaf:name "Shodh Sagar" .
+
+ex:author_28_1 a foaf:Person ;
+    foaf:name "Abhinav Deshmukh" .
+
+ex:author_29_0 a foaf:Person ;
+    foaf:name "Laura Alejandra Campos Rodríguez" .
+
+ex:author_29_1 a foaf:Person ;
+    foaf:name "Daniel Julián Sánchez Álvarez" .
+
+ex:author_29_2 a foaf:Person ;
+    foaf:name "Alexandra Abuchar Porras" .
+
+ex:author_2_0 a foaf:Person ;
+    foaf:name "Riccardo Miotto" .
+
+ex:author_2_1 a foaf:Person ;
+    foaf:name "Fei Wang" .
+
+ex:author_2_2 a foaf:Person ;
+    foaf:name "Shuang Wang" .
+
+ex:author_2_3 a foaf:Person ;
+    foaf:name "Xiaoqian Jiang" .
+
+ex:author_2_4 a foaf:Person ;
+    foaf:name "Joel T Dudley" .
+
+ex:author_3_0 a foaf:Person ;
+    foaf:name "Chi-Fu Jeffrey Yang" .
+
+ex:author_3_1 a foaf:Person ;
+    foaf:name "Matthew G Hartwig" .
+
+ex:author_3_2 a foaf:Person ;
+    foaf:name "Thomas A D'amico" .
+
+ex:author_3_3 a foaf:Person ;
+    foaf:name "Mark F Berry" .
+
+ex:author_4_0 a foaf:Person ;
+    foaf:name "Teun Van Gelder" .
+
+ex:author_4_1 a foaf:Person ;
+    foaf:name "Alexander A Vinks" .
+
+ex:author_5_0 a foaf:Person ;
+    foaf:name "Ashish Vaswani" .
+
+ex:author_5_1 a foaf:Person ;
+    foaf:name "Google Brain" .
+
+ex:author_5_2 a foaf:Person ;
+    foaf:name "Noam Shazeer" .
+
+ex:author_5_3 a foaf:Person ;
+    foaf:name "Niki Parmar" .
+
+ex:author_5_4 a foaf:Person ;
+    foaf:name "Jakob Uszkoreit" .
+
+ex:author_5_5 a foaf:Person ;
+    foaf:name "Llion Jones" .
+
+ex:author_5_6 a foaf:Person ;
+    foaf:name "Aidan N Gomez" .
+
+ex:author_5_7 a foaf:Person ;
+    foaf:name "Łukasz Kaiser" .
+
+ex:author_6_0 a foaf:Person ;
+    foaf:name "Dinggang Shen" .
+
+ex:author_6_1 a foaf:Person ;
+    foaf:name "Guorong Wu" .
+
+ex:author_6_2 a foaf:Person ;
+    foaf:name "Heung-Il Suk" .
+
+ex:author_7_0 a foaf:Person ;
+    foaf:name "Nuria Caballé-Cervigón" .
+
+ex:author_7_1 a foaf:Person ;
+    foaf:name "José L Castillo-Sequera" .
+
+ex:author_7_2 a foaf:Person ;
+    foaf:name "Juan A Gómez-Pulido" .
+
+ex:author_7_3 a foaf:Person ;
+    foaf:name "José M Gómez-Pulido" .
+
+ex:author_7_4 a foaf:Person ;
+    foaf:name "María L Polo-Luque" .
+
+ex:author_8_0 a foaf:Person ;
+    foaf:name "Travers Ching" .
+
+ex:author_8_1 a foaf:Person ;
+    foaf:name "Daniel S Himmelstein" .
+
+ex:author_8_10 a foaf:Person ;
+    foaf:name "Wei Xie" .
+
+ex:author_8_11 a foaf:Person ;
+    foaf:name "Gail L Rosen" .
+
+ex:author_8_12 a foaf:Person ;
+    foaf:name "Benjamin J Lengerich" .
+
+ex:author_8_13 a foaf:Person ;
+    foaf:name "Johnny Israeli" .
+
+ex:author_8_14 a foaf:Person ;
+    foaf:name "Jack Lanchantin" .
+
+ex:author_8_15 a foaf:Person ;
+    foaf:name "Stephen Woloszynek" .
+
+ex:author_8_16 a foaf:Person ;
+    foaf:name "Anne E Carpenter" .
+
+ex:author_8_17 a foaf:Person ;
+    foaf:name "Avanti Shrikumar" .
+
+ex:author_8_18 a foaf:Person ;
+    foaf:name "Jinbo Xu" .
+
+ex:author_8_19 a foaf:Person ;
+    foaf:name "Evan M Cofer" .
+
+ex:author_8_2 a foaf:Person ;
+    foaf:name "Brett K Beaulieu-Jones" .
+
+ex:author_8_20 a foaf:Person ;
+    foaf:name "Christopher A Lavender" .
+
+ex:author_8_21 a foaf:Person ;
+    foaf:name "Srinivas C Turaga" .
+
+ex:author_8_22 a foaf:Person ;
+    foaf:name "Amr M Alexandari" .
+
+ex:author_8_23 a foaf:Person ;
+    foaf:name "Zhiyong Lu" .
+
+ex:author_8_24 a foaf:Person ;
+    foaf:name "David J Harris" .
+
+ex:author_8_25 a foaf:Person ;
+    foaf:name "Dave Decaprio" .
+
+ex:author_8_26 a foaf:Person ;
+    foaf:name "Yanjun Qi" .
+
+ex:author_8_27 a foaf:Person ;
+    foaf:name "Anshul Kundaje" .
+
+ex:author_8_28 a foaf:Person ;
+    foaf:name "Yifan Peng" .
+
+ex:author_8_29 a foaf:Person ;
+    foaf:name "Laura K Wiley" .
+
+ex:author_8_3 a foaf:Person ;
+    foaf:name "Alexandr A Kalinin" .
+
+ex:author_8_30 a foaf:Person ;
+    foaf:name "Marwin H S Segler" .
+
+ex:author_8_31 a foaf:Person ;
+    foaf:name "Simina M Boca" .
+
+ex:author_8_32 a foaf:Person ;
+    foaf:name "S Joshua Swamidass" .
+
+ex:author_8_33 a foaf:Person ;
+    foaf:name "Austin Huang" .
+
+ex:author_8_34 a foaf:Person ;
+    foaf:name "Anthony Gitter" .
+
+ex:author_8_35 a foaf:Person ;
+    foaf:name "Casey S Greene" .
+
+ex:author_8_4 a foaf:Person ;
+    foaf:name "Brian T Do" .
+
+ex:author_8_5 a foaf:Person ;
+    foaf:name "Gregory P Way" .
+
+ex:author_8_6 a foaf:Person ;
+    foaf:name "Enrico Ferrero" .
+
+ex:author_8_7 a foaf:Person ;
+    foaf:name "Paul-Michael Agapow" .
+
+ex:author_8_8 a foaf:Person ;
+    foaf:name "Michael Zietz" .
+
+ex:author_8_9 a foaf:Person ;
+    foaf:name "Michael M Hoffman" .
+
+ex:author_9_0 a foaf:Person ;
+    foaf:name "Chensi Cao" .
+
+ex:author_9_1 a foaf:Person ;
+    foaf:name "Feng Liu" .
+
+ex:author_9_2 a foaf:Person ;
+    foaf:name "Hai Tan" .
+
+ex:author_9_3 a foaf:Person ;
+    foaf:name "Deshou Song" .
+
+ex:author_9_4 a foaf:Person ;
+    foaf:name "Wenjie Shu" .
+
+ex:author_9_5 a foaf:Person ;
+    foaf:name "Weizhong Li" .
+
+ex:author_9_6 a foaf:Person ;
+    foaf:name "Yiming Zhou" .
+
+ex:author_9_7 a foaf:Person ;
+    foaf:name "Xiaochen Bo" .
+
+ex:author_9_8 a foaf:Person ;
+    foaf:name "Zhi Xie" .
+
+<http://example.org/topic/Advanced_Causal_Inference_Techniques> a skos:Concept ;
+    skos:prefLabel "Advanced Causal Inference Techniques" .
+
+<http://example.org/topic/Antibiotics_Pharmacokinetics_and_Efficacy> a skos:Concept ;
+    skos:prefLabel "Antibiotics Pharmacokinetics and Efficacy" .
+
+<http://example.org/topic/Biomedical_Text_Mining_and_Ontologies> a skos:Concept ;
+    skos:prefLabel "Biomedical Text Mining and Ontologies" .
+
+<http://example.org/topic/Biomedical_and_Engineering_Education> a skos:Concept ;
+    skos:prefLabel "Biomedical and Engineering Education" .
+
+<http://example.org/topic/Blood_Pressure_and_Hypertension_Studies> a skos:Concept ;
+    skos:prefLabel "Blood Pressure and Hypertension Studies" .
+
+<http://example.org/topic/Digital_Imaging_for_Blood_Diseases> a skos:Concept ;
+    skos:prefLabel "Digital Imaging for Blood Diseases" .
+
+<http://example.org/topic/Gene_expression_and_cancer_classification> a skos:Concept ;
+    skos:prefLabel "Gene expression and cancer classification" .
+
+<http://example.org/topic/Genetic_Associations_and_Epidemiology> a skos:Concept ;
+    skos:prefLabel "Genetic Associations and Epidemiology" .
+
+<http://example.org/topic/Genomics_and_Phylogenetic_Studies> a skos:Concept ;
+    skos:prefLabel "Genomics and Phylogenetic Studies" .
+
+<http://example.org/topic/Genomics_and_Rare_Diseases> a skos:Concept ;
+    skos:prefLabel "Genomics and Rare Diseases" .
+
+<http://example.org/topic/Health_Systems,_Economic_Evaluations,_Quality_of_Life> a skos:Concept ;
+    skos:prefLabel "Health Systems, Economic Evaluations, Quality of Life" .
+
+<http://example.org/topic/Hormonal_Regulation_and_Hypertension> a skos:Concept ;
+    skos:prefLabel "Hormonal Regulation and Hypertension" .
+
+<http://example.org/topic/Inflammatory_Bowel_Disease> a skos:Concept ;
+    skos:prefLabel "Inflammatory Bowel Disease" .
+
+<http://example.org/topic/Lipoproteins_and_Cardiovascular_Health> a skos:Concept ;
+    skos:prefLabel "Lipoproteins and Cardiovascular Health" .
+
+<http://example.org/topic/Lung_Cancer_Diagnosis_and_Treatment> a skos:Concept ;
+    skos:prefLabel "Lung Cancer Diagnosis and Treatment" .
+
+<http://example.org/topic/Lung_Cancer_Treatments_and_Mutations> a skos:Concept ;
+    skos:prefLabel "Lung Cancer Treatments and Mutations" .
+
+<http://example.org/topic/Machine_Learning_in_Bioinformatics> a skos:Concept ;
+    skos:prefLabel "Machine Learning in Bioinformatics" .
+
+<http://example.org/topic/Maternal_and_fetal_healthcare> a skos:Concept ;
+    skos:prefLabel "Maternal and fetal healthcare" .
+
+<http://example.org/topic/Medical_Imaging_and_Analysis> a skos:Concept ;
+    skos:prefLabel "Medical Imaging and Analysis" .
+
+<http://example.org/topic/Pregnancy_and_preeclampsia_studies> a skos:Concept ;
+    skos:prefLabel "Pregnancy and preeclampsia studies" .
+
+<http://example.org/topic/Preterm_Birth_and_Chorioamnionitis> a skos:Concept ;
+    skos:prefLabel "Preterm Birth and Chorioamnionitis" .
+
+<http://example.org/topic/RNA_modifications_and_cancer> a skos:Concept ;
+    skos:prefLabel "RNA modifications and cancer" .
+
+<http://example.org/topic/Renal_Transplantation_Outcomes_and_Treatments> a skos:Concept ;
+    skos:prefLabel "Renal Transplantation Outcomes and Treatments" .
+
+<http://example.org/topic/Rheumatoid_Arthritis_Research_and_Therapies> a skos:Concept ;
+    skos:prefLabel "Rheumatoid Arthritis Research and Therapies" .
+
+<http://example.org/topic/Statistical_Methods_and_Inference> a skos:Concept ;
+    skos:prefLabel "Statistical Methods and Inference" .
+
+<http://example.org/topic/Statistical_Methods_in_Clinical_Trials> a skos:Concept ;
+    skos:prefLabel "Statistical Methods in Clinical Trials" .
+
+<http://example.org/topic/Systemic_Lupus_Erythematosus_Research> a skos:Concept ;
+    skos:prefLabel "Systemic Lupus Erythematosus Research" .
+
+<http://example.org/topic/Artificial_Intelligence_in_Healthcare> a skos:Concept ;
+    skos:prefLabel "Artificial Intelligence in Healthcare" .
+
+<http://example.org/topic/Bioinformatics_and_Genomic_Networks> a skos:Concept ;
+    skos:prefLabel "Bioinformatics and Genomic Networks" .
+
+<http://example.org/topic/Computational_Drug_Discovery_Methods> a skos:Concept ;
+    skos:prefLabel "Computational Drug Discovery Methods" .
+
+<http://example.org/topic/Health,_Environment,_Cognitive_Aging> a skos:Concept ;
+    skos:prefLabel "Health, Environment, Cognitive Aging" .
+
+<http://example.org/topic/Cancer_Genomics_and_Diagnostics> a skos:Concept ;
+    skos:prefLabel "Cancer Genomics and Diagnostics" .
+
+<http://example.org/topic/Cell_Image_Analysis_Techniques> a skos:Concept ;
+    skos:prefLabel "Cell Image Analysis Techniques" .
+
+<http://example.org/topic/Artificial_Intelligence_in_Healthcare_and_Education> a skos:Concept ;
+    skos:prefLabel "Artificial Intelligence in Healthcare and Education" .
+
+<http://example.org/topic/COVID-19_diagnosis_using_AI> a skos:Concept ;
+    skos:prefLabel "COVID-19 diagnosis using AI" .
+
+<http://example.org/topic/Genetics,_Bioinformatics,_and_Biomedical_Research> a skos:Concept ;
+    skos:prefLabel "Genetics, Bioinformatics, and Biomedical Research" .
+
+<http://example.org/topic/Machine_Learning_in_Healthcare> a skos:Concept ;
+    skos:prefLabel "Machine Learning in Healthcare" .
+
+<http://example.org/topic/Radiomics_and_Machine_Learning_in_Medical_Imaging> a skos:Concept ;
+    skos:prefLabel "Radiomics and Machine Learning in Medical Imaging" .
+
+<http://example.org/topic/AI_in_cancer_detection> a skos:Concept ;
+    skos:prefLabel "AI in cancer detection" .
+

@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Load the RDF graph
 graph = Graph()
-graph.parse("papers_wikidata_enriched.ttl", format="turtle")
+graph.parse("output/papers_wikidata_enriched.ttl", format="turtle")
 
 # HTML template for the SPARQL interface
 HTML_TEMPLATE = """

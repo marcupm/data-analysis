@@ -2,7 +2,7 @@ import json
 import requests
 
 # Cargar datos desde el archivo original
-with open("papers_metadata.json", "r", encoding="utf-8") as f:
+with open("../extract_pdf_data/output/papers_metadata.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 papers = data["papers"]
@@ -36,7 +36,7 @@ for paper in papers:
     print(f"{paper['title'][:60]}... → {topics}")
 
 # Guardar los resultados enriquecidos
-with open("papers_with_openalex.json", "w", encoding="utf-8") as f:
+with open("output/papers_with_openalex.json", "w", encoding="utf-8") as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
 
-print("✅ Temas agregados y guardados en 'papers_with_openalex.json'")
+print("✅ Temas agregados y guardados en 'output/papers_with_openalex.json'")

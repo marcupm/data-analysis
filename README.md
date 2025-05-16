@@ -36,7 +36,7 @@ This project analyzes a corpus of research papers to extract topics, compute sim
 
 2. Install required Python packages:
    ```bash
-   pip install -r docs/requirements.txt
+   pip install -r requirements.txt
    ```
 
 3. Start the GROBID service:
@@ -56,7 +56,7 @@ Hay que editar el docker para que haga todo.
 ### 1. Extract Metadata from PDFs
 
 ```bash
-cd ExtractPDFMetadata
+cd extract_pdf_data
 python main.py
 ```
 

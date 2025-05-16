@@ -10,14 +10,3 @@ services:
     init: true
     ulimits:
       core: 0
-
-  app:
-    build: .
-    container_name: ExtractPDFMetadata
-    depends_on:
-      - grobid
-    environment:
-      - GROBID_URL=http://grobid:8070
-    volumes:
-      - ./ExtractPDFMetadata/output:/ExtractPDFMetadata/output
-    command: ["sh", "-c", "until curl -f http://grobid:8070/api/isalive >/dev/null 2>&1; do echo 'Esperando a Grobid...'; sleep 5; done; python main.py; tail -f /dev/null"]

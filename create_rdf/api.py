@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Load RDF data
 graph = Graph()
-graph.parse("papers_wikidata_enriched.ttl", format="turtle")
+graph.parse("output/papers_wikidata_enriched.ttl", format="turtle")
 
 @app.route('/api/papers', methods=['GET'])
 def get_papers():
