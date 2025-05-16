@@ -192,7 +192,7 @@ The pipeline creates:
 ```
 research-paper-analysis/
 ├── data/                      # Raw PDF papers 
-├── ExtractPDFMetadata/        # PDF extraction components
+├── extract_pdf_data/        # PDF extraction components
 │   ├── src/
 │   │   ├── grobid_client.py   # Client for GROBID service
 │   │   └── metadata_extractor.py # Extract metadata from GROBID output

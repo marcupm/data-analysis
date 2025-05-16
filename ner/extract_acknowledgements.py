@@ -21,16 +21,15 @@ def load_papers_with_grobid():
     # Try to load GROBID output
     grobid_papers = {}
     try:
-        with open("../ExtractPDFMetadata/output/grobid_output.json", "r", encoding="utf-8") as f:
+        with open("../extract_pdf_data/output/grobid_output.json", "r", encoding="utf-8") as f:
             grobid_papers = json.load(f)
     except FileNotFoundError:
         print("No GROBID output file found")
     
     # Merge GROBID data with papers
     for i, paper in enumerate(papers):
-        filename = f"paper_{i}.pdf"
-        if filename in grobid_papers:
-            paper["grobid_xml"] = grobid_papers[filename]
+        if paper["filename"] in grobid_papers:
+            paper["grobid_xml"] = grobid_papers[paper["filename"]]
     
     return papers
 
@@ -59,7 +58,7 @@ def extract_acknowledgements_from_grobid(xml_text):
         return ""
         
     # Look for acknowledgement section in GROBID XML
-    ack_pattern = r'<div xmlns="http://www.tei-c.org/ns/1.0">\s*<head>Acknowledgement[s]?</head>(.*?)</div>'
+    ack_pattern = r'<div[^>]*type="acknowledgement"[^>]*>(.*?)</div>'
     matches = re.search(ack_pattern, xml_text, re.DOTALL | re.IGNORECASE)
     
     if matches:
@@ -139,9 +138,6 @@ def process_papers_acknowledgements(papers):
             text_candidates.append(paper["abstract"])
         if "body" in paper and paper["body"]:
             text_candidates.append(paper["body"])
-        if "grobid_xml" in paper and paper["grobid_xml"]:
-            text_candidates.append(extract_acknowledgements_from_grobid(paper["grobid_xml"]))
-            
         # If we have no text sources, skip this paper
         if not text_candidates:
             print(f"Skipping paper {i}: No text content found")
@@ -171,7 +167,24 @@ def process_papers_acknowledgements(papers):
                 results.append(result)
                 print(f"Found acknowledgements in paper {i}: '{paper.get('title', '')[:40]}...'")
                 break
-                
+        
+        if "grobid_xml" in paper and paper["grobid_xml"]:
+            acknowledgements = extract_acknowledgements_from_grobid(paper["grobid_xml"])
+            if len(acknowledgements.strip()) > 10:
+                found_ack = True
+                print(acknowledgements)
+                entities = extract_entities_from_acknowledgements(acknowledgements)    
+                funders = identify_funding_organizations(entities)
+                result = {
+                    "paper_id": i,
+                    "title": paper.get("title", ""),
+                    "acknowledgements": acknowledgements,
+                    "entities": entities,
+                    "funders": funders
+                }
+                results.append(result)
+                print(f"Found acknowledgements in paper {i}: '{paper.get('title', '')[:40]}...'")
+
         if not found_ack:
             print(f"No acknowledgements found in paper {i}: '{paper.get('title', '')[:40]}...'")
     
