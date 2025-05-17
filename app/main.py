@@ -6,6 +6,10 @@ from enrich.openalex_query import add_topics
 from enrich.json_to_rdf import json_to_rdf
 from enrich.wikidata_enrich import enrich_rdf_with_wikidata
 from similarity.paper_similarity import similarity_score
+from ner.extract_acknowledgements import named_entity_recognition
+from provenance.create_prov import create_provenance_document
+from ro_create.create_ro_crate import create_ro_crate_metadata
+from topic_modeling.abstract_topics import create_topic_modeling
 import os
 
 # Configure logging
@@ -53,15 +57,27 @@ def main():
 
     # Step 5: Enrich rdf file with wikidata
     if enrich_rdf_with_wikidata(os.path.join(output_folder,"papers_with_topics.ttl"),
-                                 os.path.join(output_folder,"paper_similarities.json")) == 1:
+                                 os.path.join(output_folder,"enriched.ttl")) == 1:
         print("Error perfoming enrichment with wikidata: Aborting")
         return 
 
+    # Step 6: Run Topic Modeling on Abstracts
+    create_topic_modeling()
 
     # Step 6: Generate similarity score between papers based on topics
     if similarity_score(os.path.join(output_folder,"papers_with_openalex.json"),
                          os.path.join(output_folder,"paper_similarities.json")) == 1:
         print("Error analalysing similarities")
+
+    # Step 7: Extracting named entities from acknowledgements
+    named_entity_recognition()
+
+    # Step 8: Generate provenance
+    create_provenance_document()
+
+    # Step 9: Package as Research Object
+    create_ro_crate_metadata()
+
 
 if __name__ == "__main__":
     main()
