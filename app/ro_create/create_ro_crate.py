@@ -98,12 +98,8 @@ def create_ro_crate_metadata():
     }
     
     # Save the RO-Crate metadata
-    os.makedirs("ro_crate", exist_ok=True)
-    with open("ro_crate/ro-crate-metadata.json", "w", encoding="utf-8") as f:
+    with open(os.path.join("output","ro-crate-metadata.json"), "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=2, ensure_ascii=False)
     
-    print("✓ RO-Crate metadata created at ro_crate/ro-crate-metadata.json")
+    print("✓ RO-Crate metadata created at output/ro-crate-metadata.json")
     return metadata
-
-if __name__ == "__main__":
-    create_ro_crate_metadata()

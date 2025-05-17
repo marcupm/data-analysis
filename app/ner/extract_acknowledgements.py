@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 def load_papers():
     """Load paper data from JSON file"""
-    with open("../create_rdf/output/papers_with_openalex.json", "r", encoding="utf-8") as f:
+    with open(os.path.join("output","papers_with_openalex.json"), "r", encoding="utf-8") as f:
         data = json.load(f)
     return data["papers"]
 
@@ -14,14 +14,14 @@ def load_papers():
 def load_papers_with_grobid():
     """Load papers with GROBID XML if available"""
     # Load papers metadata
-    with open("../create_rdf/output/papers_with_openalex.json", "r", encoding="utf-8") as f:
+    with open(os.path.join("output","papers_with_openalex.json"), "r", encoding="utf-8") as f:
         data = json.load(f)
     papers = data["papers"]
     
     # Try to load GROBID output
     grobid_papers = {}
     try:
-        with open("../extract_pdf_data/output/grobid_output.json", "r", encoding="utf-8") as f:
+        with open(os.path.join("output","grobid_output.json"), "r", encoding="utf-8") as f:
             grobid_papers = json.load(f)
     except FileNotFoundError:
         print("No GROBID output file found")
@@ -230,7 +230,7 @@ def visualize_funding_organizations(results):
         
         print(f"✓ Funding organizations visualization saved to output/funding_organizations.png")
 
-if __name__ == "__main__":
+def named_entity_recognition():
     # Load papers
     papers = load_papers_with_grobid()
     print(f"Loaded {len(papers)} papers")

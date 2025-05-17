@@ -83,29 +83,27 @@ def create_provenance_document():
     
     # Save the provenance document
     os.makedirs("output", exist_ok=True)
-    
+    output_dir = "output"
+
     # Save as PROV-N notation
-    with open("output/provenance.provn", "w") as f:
+    with open(os.path.join(output_dir,"provenance.provn"), "w") as f:
         f.write(doc.get_provn())
     
     # Save as PROV-XML
-    with open("output/provenance.xml", "w", encoding="utf-8") as f:
+    with open(os.path.join(output_dir,"provenance.xml"), "w", encoding="utf-8") as f:
         f.write(doc.serialize(format="xml"))
     
     # Save as PROV-JSON
-    with open("output/provenance.json", "w", encoding="utf-8") as f:
+    with open(os.path.join(output_dir,"provenance.json"), "w", encoding="utf-8") as f:
         f.write(doc.serialize(format="json"))
     
     # Create a visualization
     try:
         dot = prov.dot.prov_to_dot(doc)
-        dot.write_png("output/workflow.png")
+        dot.write_png(os.path.join(output_dir,"workflow.png"))
         print("✓ Workflow visualization created")
     except Exception as e:
         print(f"Could not create visualization: {e}. Install Graphviz from graphviz.org to enable visualizations.")
     
     print("✓ PROV documentation created in output/ directory")
     return doc
-
-if __name__ == "__main__":
-    create_provenance_document()

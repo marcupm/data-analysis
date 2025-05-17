@@ -10,11 +10,15 @@ services:
     init: true
     ulimits:
       core: 0
-  provenance_app:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: provenance_service
-    command: ["python", "provenance/create_prov.py"]
+    container_name: app
     depends_on:
       - grobid
+    environment:
+      - GROBID_URL=http://grobid:8070
+    volumes:
+      - ./data_analysis/output:/data_analysis/output
+    command: ["sh", "-c", "until curl -f http://grobid:8070/api/isalive >/dev/null 2>&1; do echo 'Esperando a Grobid...'; sleep 5; done; cd app; python main.py; tail -f /dev/null"]

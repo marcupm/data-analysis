@@ -9,7 +9,7 @@ import pandas as pd
 
 def load_papers():
     """Load paper data from JSON file"""
-    with open("../create_rdf/output/papers_with_openalex.json", "r", encoding="utf-8") as f:
+    with open(os.path.join("output","papers_with_openalex.json"), "r", encoding="utf-8") as f:
         data = json.load(f)
     return data["papers"]
 
@@ -123,15 +123,15 @@ def visualize_topics(topic_data, method):
     plt.xticks(rotation=45, ha="right")
     plt.title(f"Top Words in Topics ({method})")
     plt.tight_layout()
-    plt.savefig(f"output/topics_{method}.png")
+    plt.savefig(os.path.join("output",f"topics_{method}.png"))
     
     # Save topic data
-    with open(f"output/topics_{method}.json", "w") as f:
+    with open(os.path.join("output",f"topics_{method}.json"), "w") as f:
         json.dump(topic_data, f, indent=2)
     
     print(f"✓ {method} topic modeling results saved to output folder")
 
-if __name__ == "__main__":
+def create_topic_modeling():
     # Load papers
     papers = load_papers()
     print(f"Loaded {len(papers)} papers")
