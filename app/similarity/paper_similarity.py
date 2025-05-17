@@ -103,10 +103,12 @@ def visualize_similarity_network(similarity_matrix, paper_ids, titles, output_pa
     labels = {node: G.nodes[node]["title"][:20] + "..." for node in G.nodes}
     nx.draw_networkx_labels(G, pos, labels=labels, font_size=8)
     
+    figure_output = os.path.join("output", "similarity_network.png")
+
     plt.axis("off")
     plt.title(f"Paper Similarity Network (threshold={threshold})")
     plt.tight_layout()
-    plt.savefig("output/similarity_network.png", dpi=300)
+    plt.savefig(figure_output, dpi=300)
     
     # Save similarity data
     with open(output_path, "w") as f:
