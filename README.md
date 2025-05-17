@@ -1,10 +1,5 @@
-# AIOSRSE-UPM
+# Data Analysis
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14957145.svg)](https://doi.org/10.5281/zenodo.14957145)
-
-
-README NUEVO:
-
-# Research Paper Analysis Pipeline
 
 ## Overview
 

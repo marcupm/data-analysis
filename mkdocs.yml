@@ -1,4 +1,4 @@
-site_name: Individual Assessment AIOSRSE
+site_name: Data Analysis
 nav:
   - Home: index.md
   - Installation: install.md

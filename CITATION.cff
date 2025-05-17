@@ -4,8 +4,14 @@ authors:
 - family-names: "Rosado"
   given-names: "Alejandro"
   orcid: "https://orcid.org/0009-0003-5984-2579"
-title: "AIOSRSE-UPM"
+- family-names: "González"
+  given-names: "Marc"
+  orcid: "https://orcid.org/0009-0001-7576-1424"
+- family-names: "Alonso"
+  given-names: "Luís"
+  orcid: "https://orcid.org/0009-0001-1648-3647"
+title: "Data Analysis"
 version: 1.0.0
 doi: 10.5281/zenodo.1234
 date-released: 2025-02-10
-url: "https://github.com/AlRos14/AIOSRSE-UPM"
+url: "https://github.com/marcupm/data-analysis"
