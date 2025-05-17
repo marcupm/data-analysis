@@ -55,6 +55,9 @@ def enrich_rdf_with_wikidata(input_file, output_file):
     # Load the existing graph
     g = Graph()
     g.parse(input_file, format="turtle")
+    if len(g) == 0:
+        print("❌ Error there are no paper to enrich")
+        return 1
     
     # Add owl:sameAs predicates
     
@@ -90,3 +93,4 @@ def enrich_rdf_with_wikidata(input_file, output_file):
     # Save the enriched graph
     g.serialize(output_file, format="turtle")
     print(f"✅ Enriched RDF saved to {output_file}")
+    return 0

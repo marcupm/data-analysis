@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import os
 
-def load_papers():
+def load_papers(file_path):
     """Load paper data from JSON file"""
-    with open("../create_rdf/output/papers_with_openalex.json", "r", encoding="utf-8") as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data["papers"]
 
@@ -69,7 +69,7 @@ def find_most_similar_pairs(similarity_matrix, paper_ids, titles, top_n=10):
     
     return sorted(pairs, key=lambda x: x["similarity"], reverse=True)
 
-def visualize_similarity_network(similarity_matrix, paper_ids, titles, threshold=0.5):
+def visualize_similarity_network(similarity_matrix, paper_ids, titles, output_path, threshold=0.5):
     """Create a network visualization of paper similarities"""
     os.makedirs("output", exist_ok=True)
     
@@ -109,7 +109,7 @@ def visualize_similarity_network(similarity_matrix, paper_ids, titles, threshold
     plt.savefig("output/similarity_network.png", dpi=300)
     
     # Save similarity data
-    with open("output/paper_similarities.json", "w") as f:
+    with open(output_path, "w") as f:
         json.dump({
             "similarity_threshold": threshold,
             "papers": [{"id": paper_ids[i], "title": titles[i]} for i in range(len(paper_ids))],
@@ -117,11 +117,12 @@ def visualize_similarity_network(similarity_matrix, paper_ids, titles, threshold
                      for i in range(n) for j in range(i+1, n) if similarity_matrix[i, j] >= threshold]
         }, f, indent=2)
     
-    print(f"✓ Similarity network visualization saved to output/similarity_network.png")
+    print(f"✓ Similarity network visualization saved in output/similarity_network.png")
 
-if __name__ == "__main__":
+
+def similarity_score(file_path, output_path):
     # Load papers
-    papers = load_papers()
+    papers = load_papers(file_path)
     print(f"Loaded {len(papers)} papers")
     
     # Create embeddings
@@ -137,4 +138,4 @@ if __name__ == "__main__":
         print(f"{i+1}. [{pair['similarity']:.2f}] '{pair['paper1_title']}' and '{pair['paper2_title']}'")
     
     # Visualize similarity network
-    visualize_similarity_network(similarity_matrix, paper_ids, titles, threshold=0.45)
+    visualize_similarity_network(similarity_matrix, paper_ids, titles, output_path, threshold=0.45)

@@ -26,7 +26,13 @@ def check_grobid_availability():
 def process_papers(pdf_folder):
     """Send PDFs to GROBID for processing and return the extracted text."""
     processed_papers = {}
-    grobid_url = check_grobid_availability() + "processFulltextDocument"
+    
+    availability = check_grobid_availability()
+    if availability is None:
+        print("❌ Error: grobid not avaliable")
+        return 1
+    
+    grobid_url = availability + "processFulltextDocument"
 
     for filename in os.listdir(pdf_folder):
         if filename.endswith(".pdf"):

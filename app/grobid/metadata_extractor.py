@@ -179,5 +179,7 @@ def extract_metadata_from_grobid_output(processed_papers, output_folder, output_
         with open(grobid_output_file, 'w', encoding='utf-8') as f:
             json.dump(processed_papers, f, ensure_ascii=False)
         logging.info(f"✅ GROBID output saved to: {grobid_output_file}")
+        return 0
     except Exception as e:
-        logging.error(f"Error saving GROBID output: {e}")
+        logging.error(f"❌ Error saving GROBID output: {e}")
+        return 1

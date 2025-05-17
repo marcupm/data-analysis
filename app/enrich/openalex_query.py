@@ -6,6 +6,10 @@ def add_topics(file_path, output_path):
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
+    if data is None:
+        print(f"❌ Error: can't open file {file_path}")
+        return 1
+
     papers = data["papers"]
 
     def get_openalex_topics(doi):
@@ -41,3 +45,4 @@ def add_topics(file_path, output_path):
         json.dump(data, f, indent=2, ensure_ascii=False)
 
     print(f"✅ Temas agregados y guardados en '{output_path}'")
+    return 0
