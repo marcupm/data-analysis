@@ -21,4 +21,4 @@ services:
       - GROBID_URL=http://grobid:8070
     volumes:
       - ./data_analysis/output:/data_analysis/output
-    command: ["sh", "-c", "until curl -f http://grobid:8070/api/isalive >/dev/null 2>&1; do echo 'Esperando a Grobid...'; sleep 5; done; cd app; python main.py; tail -f /dev/null"]
+    command: ["sh", "-c", "until curl -f http://grobid:8070/api/isalive >/dev/null 2>&1; do echo 'Esperando a Grobid...'; sleep 5; done; python main.py; tail -f /dev/null"]
