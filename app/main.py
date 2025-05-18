@@ -11,20 +11,43 @@ from provenance.create_prov import create_provenance_document
 from ro_create.create_ro_crate import create_ro_crate_metadata
 from topic_modeling.abstract_topics import create_topic_modeling
 import os
+import subprocess
+import sys
+import time
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-def main():
+def run_api_services():
+    """Run both API and SPARQL endpoint services as subprocesses."""
+    api_path = os.path.join("..", "api", "api.py")
+    sparql_path = os.path.join("..", "api", "sparql_endpoint.py")
+    
+    logging.info("Starting API and SPARQL endpoint services...")
+    
+    api_process = subprocess.Popen([sys.executable, api_path])
+    sparql_process = subprocess.Popen([sys.executable, sparql_path])
+    
+    logging.info("API running on http://localhost:5001")
+    logging.info("SPARQL endpoint running on http://localhost:5000")
+    
+    try:
+        # Keep the main thread alive
+        print("Services are running. Press Ctrl+C to stop...")
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        logging.info("Shutting down services...")
+        api_process.terminate()
+        sparql_process.terminate()
+        api_process.wait(timeout=5)
+        sparql_process.wait(timeout=5)
 
-    parser = argparse.ArgumentParser(
-        description='Process PDF papers and generate visualizations.\n' +
-        'This script processes PDF papers in the data/ folder, extracts information, and generates visualizations in the output/ folder.'
-    )
-    parser.parse_args()
-
+def run_analysis_pipeline():
+    """Run the complete data analysis pipeline."""
     output_folder = "output"
-
     output_file = os.path.join(output_folder, "papers_metadata.json")
 
     logging.info("Initializing analysis...")
@@ -44,20 +67,20 @@ def main():
     logging.info("Metadata extracted with Grobid. Output saved in /output/grobid_output.json")
 
     # Step 3: Add topics to json with openalex
-    if add_topics( os.path.join(output_folder,"papers_metadata.json"),
-                    os.path.join(output_folder,"papers_with_openalex.json")) == 1:
+    if add_topics(os.path.join(output_folder,"papers_metadata.json"),
+                  os.path.join(output_folder,"papers_with_openalex.json")) == 1:
         print("Error adding topics: Aborting")
         return
 
     # Step 4: Convert json to rdf file
-    if json_to_rdf( os.path.join(output_folder,"papers_with_openalex.json"),
-                     os.path.join(output_folder,"papers_with_topics.ttl")) == 1:
+    if json_to_rdf(os.path.join(output_folder,"papers_with_openalex.json"),
+                   os.path.join(output_folder,"papers_with_topics.ttl")) == 1:
         print("Error transforming to RDF: Aborting")
         return
 
     # Step 5: Enrich rdf file with wikidata
     if enrich_rdf_with_wikidata(os.path.join(output_folder,"papers_with_topics.ttl"),
-                                 os.path.join(output_folder,"enriched.ttl")) == 1:
+                               os.path.join(output_folder,"enriched.ttl")) == 1:
         print("Error perfoming enrichment with wikidata: Aborting")
         return 
 
@@ -66,7 +89,7 @@ def main():
 
     # Step 6: Generate similarity score between papers based on topics
     if similarity_score(os.path.join(output_folder,"papers_with_openalex.json"),
-                         os.path.join(output_folder,"paper_similarities.json")) == 1:
+                       os.path.join(output_folder,"paper_similarities.json")) == 1:
         print("Error analalysing similarities")
 
     # Step 7: Extracting named entities from acknowledgements
@@ -78,7 +101,11 @@ def main():
     # Step 9: Package as Research Object
     create_ro_crate_metadata()
 
+def main():
+    run_analysis_pipeline()
+    
+    # Run API services
+    run_api_services()
 
 if __name__ == "__main__":
     main()
-
