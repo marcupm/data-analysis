@@ -101,7 +101,7 @@ def run_analysis_pipeline():
     create_ro_crate_metadata()
 
 def main():
-   # run_analysis_pipeline()
+    run_analysis_pipeline()
     
     # Run API services
     run_api_services()
