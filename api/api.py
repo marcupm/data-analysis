@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify, request
 from rdflib import Graph
 import json
@@ -6,7 +7,8 @@ app = Flask(__name__)
 
 # Load RDF data
 graph = Graph()
-graph.parse("output/papers_wikidata_enriched.ttl", format="turtle")
+rdf_path = os.path.join("/app", "output", "papers_wikidata_enriched.ttl")
+graph.parse(rdf_path, format="turtle")
 
 @app.route('/api/papers', methods=['GET'])
 def get_papers():
@@ -133,4 +135,4 @@ def get_topics():
     return jsonify({"topics": topics})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(debug=True, port=5001, host='0.0.0.0')

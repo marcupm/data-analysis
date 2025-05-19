@@ -48,7 +48,6 @@ def run_api_services():
 def run_analysis_pipeline():
     """Run the complete data analysis pipeline."""
     output_folder = "output"
-    output_file = os.path.join(output_folder, "papers_metadata.json")
 
     logging.info("Initializing analysis...")
 
@@ -80,7 +79,7 @@ def run_analysis_pipeline():
 
     # Step 5: Enrich rdf file with wikidata
     if enrich_rdf_with_wikidata(os.path.join(output_folder,"papers_with_topics.ttl"),
-                               os.path.join(output_folder,"enriched.ttl")) == 1:
+                               os.path.join(output_folder,"papers_wikidata_enriched.ttl")) == 1:
         print("Error perfoming enrichment with wikidata: Aborting")
         return 
 
@@ -102,7 +101,7 @@ def run_analysis_pipeline():
     create_ro_crate_metadata()
 
 def main():
-    run_analysis_pipeline()
+   # run_analysis_pipeline()
     
     # Run API services
     run_api_services()

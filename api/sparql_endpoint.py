@@ -1,4 +1,4 @@
-from rdflib import Graph
+from rdflib import Graph, Literal
 from flask import Flask, request, jsonify, render_template_string
 import json
 import os
@@ -7,7 +7,8 @@ app = Flask(__name__)
 
 # Load the RDF graph
 graph = Graph()
-graph.parse("output/papers_wikidata_enriched.ttl", format="turtle")
+rdf_path = os.path.join("/app", "output", "papers_wikidata_enriched.ttl")
+graph.parse(rdf_path, format="turtle")
 
 # HTML template for the SPARQL interface
 HTML_TEMPLATE = """
@@ -109,4 +110,4 @@ def sparql():
             return render_template_string(HTML_TEMPLATE, default_query=query, results=f"Error: {error_message}")
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5000, host='0.0.0.0')
