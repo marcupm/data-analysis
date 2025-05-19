@@ -19,113 +19,53 @@ This project analyzes a corpus of research papers to extract topics, compute sim
 
 - Docker and Docker Compose
 - Python 3.9+
-- 30 research papers in PDF format
+- Research papers in PDF format to be analysized
 
 ## Installation
 
 1. Clone this repository:
    ```bash
-   git clone url-github
-   cd carpeta creada por el clone
+   git clone [url-github](https://github.com/marcupm/data-analysis.git)
+   cd carpeta data-analysis
    ```
 
-2. Install required Python packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+2. Place your research papers in the `data/` directory.
 
 3. Start the GROBID service:
    ```bash
    docker-compose up -d
    ```
 
-4. Place your research papers in the `data/` directory.
-
 ## Pipeline Steps
 
-Execute these steps in sequence to process your research papers:
+The pipeline follow the following steps to perform the data analysis automaticly when the main is executed
 
+### 1. Extracting Metadata from PDFs
+The pipeline begins by sending the PDF files to GROBID for processing. This extracts structured metadata such as title, authors, affiliations, DOI, and abstract for each paper.
 
-docker-compose up ya hace el punto 1. Habria que añadir los demas puntos a docker para que se ejecuten todos en el contenedor con un simple docker-compose up.
-Hay que editar el docker para que haga todo.
-### 1. Extract Metadata from PDFs
+### 2. Enriching Metadata with OpenAlex Topics
+Using the extracted DOIs, the pipeline queries the OpenAlex API to retrieve additional topical information. This helps classify each paper within broader research areas.
 
-```bash
-cd extract_pdf_data
-python main.py
-```
+### 3. Creating an RDF Knowledge Graph
+The enriched metadata is then transformed into an RDF knowledge graph, enabling semantic analysis and integration with other linked data systems.
 
-This sends PDFs to GROBID for processing and extracts structured metadata.
+### 4. Enriching RDF with Wikidata Links
+Entities within the graph—such as authors, institutions, or topics—are linked to corresponding Wikidata resources. This enhances the semantic richness and interoperability of the graph.
 
-### 2. Enrich Metadata with OpenAlex Topics
+### 5. Running Topic Modeling on Abstracts
+Topic modeling techniques (LDA and BERTopic) are applied to the abstracts to identify common research themes and emerging trends across the papers.
 
-```bash
-cd ../create_rdf
-python openalex_query.py
-```
+### 6. Calculating Paper Similarities
+Transformer-based embeddings are used to compute similarity scores between papers, helping uncover related or thematically similar research.
 
-This queries the OpenAlex API to retrieve topic information for each paper based on DOIs.
+### 7. Extracting Named Entities from Acknowledgements
+The acknowledgements sections are processed using Named Entity Recognition (NER) to identify funding organizations and other mentioned entities.
 
-### 3. Create RDF Knowledge Graph
+### 8. Documenting Data Provenance
+A PROV-compliant provenance document is generated to describe the full workflow, ensuring transparency and traceability of all data transformations.
 
-```bash
-python json_to_rdf.py
-```
-
-Converts the enriched metadata into an RDF knowledge graph.
-
-### 4. Enrich RDF with Wikidata Links
-
-```bash
-python wikidata_enrichment.py
-```
-
-Links entities in the knowledge graph to Wikidata resources.
-
-### 5. Run Topic Modeling on Abstracts
-
-```bash
-cd ../topic_modeling
-python abstract_topics.py
-```
-
-Applies both LDA and BERTopic models to identify research themes in paper abstracts.
-
-### 6. Calculate Paper Similarities
-
-```bash
-cd ../similarity
-python paper_similarity.py
-```
-
-Computes similarity scores between papers using transformer-based embeddings.
-
-### 7. Extract Named Entities from Acknowledgements
-
-```bash
-cd ../ner
-python extract_acknowledgements.py
-```
-
-Identifies funding organizations and other entities in paper acknowledgements.
-
-### 8. Document Data Provenance
-
-```bash
-cd ../provenance
-python create_prov.py
-```
-
-Creates PROV documentation describing the entire workflow.
-
-### 9. Package as Research Object
-
-```bash
-cd ../ro_crate
-python create_ro_crate.py
-```
-
-Packages all research outputs as a standardized Research Object Crate.
+### 9. Packaging as a Research Object
+Finally, all outputs are bundled into a standardized Research Object Crate (RO-Crate), making the results portable, interoperable, and reusable within the scientific ecosystem.
 
 ## Component Details
 
@@ -155,7 +95,7 @@ Converts extracted information into RDF format, linking papers with:
 Start the SPARQL endpoint:
 
 ```bash
-cd create_rdf
+cd api
 python sparql_endpoint.py
 ```
 
@@ -169,7 +109,7 @@ Example queries:
 You can also use the API:
 
 ```bash
-cd create_rdf
+cd api
 python api.py
 ```
 
@@ -186,28 +126,33 @@ The pipeline creates:
 
 ```
 research-paper-analysis/
-├── data/                      # Raw PDF papers 
-├── extract_pdf_data/        # PDF extraction components
-│   ├── src/
-│   │   ├── grobid_client.py   # Client for GROBID service
-│   │   └── metadata_extractor.py # Extract metadata from GROBID output
-│   └── main.py                # Main extraction script
-├── create_rdf/                # Knowledge graph creation
-│   ├── json_to_rdf.py         # Convert JSON to RDF
-│   ├── openalex_query.py      # Query OpenAlex API
-│   ├── sparql_endpoint.py     # SPARQL query interface
-│   ├── api.py                 # REST API for data access
-│   └── wikidata_enrichment.py # Wikidata entity linking
-├── topic_modeling/            # Topic analysis
-│   └── abstract_topics.py     # Topic modeling on abstracts
-├── similarity/                # Similarity analysis
-│   └── paper_similarity.py    # Calculate paper similarities
-├── ner/                       # Named entity recognition
-│   └── extract_acknowledgements.py # Extract entities from acknowledgements
-├── provenance/                # Provenance documentation
-│   └── create_prov.py         # Create PROV documentation
-└── ro_crate/                  # Research Object packaging
-    └── create_ro_crate.py     # Create RO-Crate metadata
+├── api/
+│   ├── api.py                           # REST API for data access
+│   └── sparql_endpoint.py               # SPARQL query interface
+├── app/
+│   ├── enrich/
+│   │   ├── json_to_rdf.py               # Convert JSON to RDF
+│   │   ├── openalex_query.py            # Query OpenAlex API
+│   │   └── wikidata_enrich.py           # Wikidata entity linking
+│   ├── grobid/
+│   │   ├── grobid_client.py             # Client for GROBID service
+│   │   └── metadata_extractor.py        # Extract metadata from GROBID output
+│   ├── ner/
+│   │   └── extract_acknowledgements.py  # Extract entities from acknowledgements
+│   ├── provenance/
+│   │   └── create_prov.py               # Create PROV documentation
+│   ├── ro_create/
+│   │   └── create_ro_crate.py           # Create RO-Crate metadata
+│   ├── similarity/
+│   │   └── paper_similarity.py          # Calculate paper similarities
+│   ├── topic_modeling/
+│   │   └── abstract_topics.py           # Topic modeling on abstracts
+│   ├── main.py                          # main file that runs all the scripts
+│   └── rationale.md
+├── test/
+│   └── test_sparql.md                   # Example queries to test sparql endpoint
+└── data/                      # Raw PDF papers 
+
 ```
 
 ## Model Decisions
