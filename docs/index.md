@@ -6,5 +6,5 @@ This is the documentation of the project.
 Check the [installation](install.md) section.
 ### Usage
 Check the [usage](usage.md) section.
-### READ ME
+### Read me file
 [README](README.md)
