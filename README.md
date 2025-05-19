@@ -21,24 +21,24 @@ This project analyzes a corpus of research papers to extract topics, compute sim
 - Python 3.9+
 - Research papers in PDF format to be analysized
 
-## Installation
+## Installation & Execution
 
 1. Clone this repository:
    ```bash
    git clone [url-github](https://github.com/marcupm/data-analysis.git)
-   cd carpeta data-analysis
+   cd data-analysis
    ```
 
 2. Place your research papers in the `data/` directory.
 
-3. Start the GROBID service:
+3. Start the service:
    ```bash
    docker-compose up -d
    ```
 
 ## Pipeline Steps
 
-The pipeline follow the following steps to perform the data analysis automaticly when the main is executed
+The pipeline follow the following steps to perform the data analysis automatically when the main is executed
 
 ### 1. Extracting Metadata from PDFs
 The pipeline begins by sending the PDF files to GROBID for processing. This extracts structured metadata such as title, authors, affiliations, DOI, and abstract for each paper.
@@ -151,8 +151,12 @@ research-paper-analysis/
 │   └── rationale.md
 ├── test/
 │   └── test_sparql.md                   # Example queries to test sparql endpoint
-└── data/                      # Raw PDF papers 
-
+├── data/                                # Raw PDF papers 
+└── docs/
+    ├── index.md                         # Index of the structure of the project
+    ├── install.md                       # Instructions to correctly install the project
+    ├── requirements.txt                 # List of programs that have to be installed
+    └── usage.md                         # Explanation of how to use the app
 ```
 
 ## Model Decisions
