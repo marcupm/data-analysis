@@ -23,6 +23,5 @@ services:
       - "5000:5000"
       - "5001:5001"
     volumes:
-      - ./app/:/app/
-      - ./data:/data
-    command: ["sh", "-c", "until curl -f http://grobid:8070/api/isalive >/dev/null 2>&1; do echo 'Esperando a Grobid...'; sleep 5; done; cd app; python main.py; tail -f /dev/null"]
+      - ./app/output:/app/output
+    command: ["sh", "-c", "until curl -f http://grobid:8070/api/isalive >/dev/null 2>&1; do echo 'Esperando a Grobid...'; sleep 5; done; python main.py; tail -f /dev/null"]
