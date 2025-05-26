@@ -3,7 +3,7 @@ FROM python:3.9.13
 
 RUN apt-get update && apt-get install -y graphviz && apt-get clean
 
-COPY requirements.txt .
+COPY docs/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Set the working directory inside the container to IndividualAssessment
