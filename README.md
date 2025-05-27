@@ -25,15 +25,15 @@ This project analyzes a corpus of research papers to extract topics, compute sim
 
 1. Clone this repository:
    ```bash
-   git clone [url-github](https://github.com/marcupm/data-analysis.git)
+   git clone https://github.com/marcupm/data-analysis.git
    cd data-analysis
    ```
 
-2. Place your research papers in the `data/` directory.
+2. Place your research papers in `data/` directory.
 
 3. Start the service:
    ```bash
-   docker-compose up -d
+   docker-compose up -d --build
    ```
 
 ## Pipeline Steps
