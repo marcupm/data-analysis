@@ -1,0 +1,1362 @@
+{
+  "similarity_threshold": 0.45,
+  "papers": [
+    {
+      "id": 0,
+      "title": "A Survey on Deep Learning in Medical Image Analysis"
+    },
+    {
+      "id": 1,
+      "title": "Machine learning applied in maternal and fetal health: a narrative review focused on pregnancy diseases and complications"
+    },
+    {
+      "id": 2,
+      "title": "Application of Machine and Deep Learning Algorithms in Intelligent Clinical Decision Support Systems in Healthcare"
+    },
+    {
+      "id": 3,
+      "title": "Machine learning of big data in gaining insight into successful treatment of hypertension"
+    },
+    {
+      "id": 4,
+      "title": "Machine learning for personalized medicine: Tailoring treatment strategies through data analysis"
+    },
+    {
+      "id": 5,
+      "title": "Large clinical databases for the study of lung cancer: Making up for the failure of randomized trials"
+    },
+    {
+      "id": 6,
+      "title": "Sharpening the resolution on data matters: a brief roadmap for understanding deep learning for medical data"
+    },
+    {
+      "id": 7,
+      "title": "Machine Learning Techniques for Personalised Medicine Approaches in Immune-Mediated Chronic Inflammatory Diseases: Applications and Challenges"
+    },
+    {
+      "id": 8,
+      "title": "Artificial Intelligence In Healthcare: A Review Of Deep Learning Models For Medical Image Analysis"
+    },
+    {
+      "id": 9,
+      "title": "Deep learning methods for cancer recognition"
+    },
+    {
+      "id": 10,
+      "title": "Opportunities and obstacles for deep learning in biology and medicine"
+    },
+    {
+      "id": 11,
+      "title": "Recent Applications of Deep Learning Algorithms in Medical Image Analysis"
+    },
+    {
+      "id": 12,
+      "title": "Revolutionizing Healthcare: How Deep Learning is poised to Change the Landscape of Medical Diagnosis and Treatment"
+    },
+    {
+      "id": 13,
+      "title": "Deep Learning in Medical Imaging"
+    },
+    {
+      "id": 14,
+      "title": "Machine learning y el control de hipertensi\u00f3n arterial"
+    },
+    {
+      "id": 15,
+      "title": "Genie Out of the Bottle: Is There a Role for Gene-Gene Interactions in Early Detection of Lung Cancer?"
+    },
+    {
+      "id": 16,
+      "title": "Machine learning&apos;s role in personalized medicine &amp; treatment optimization"
+    },
+    {
+      "id": 17,
+      "title": "Artificial Intelligence in Medical Imaging: Applications of Deep Learning for Disease Detection and Diagnosis"
+    },
+    {
+      "id": 18,
+      "title": "DeepHealth: Deep Learning for Health Informatics reviews, challenges, and opportunities on medical imaging, electronic health records, genomics, sensing, and online communication health"
+    },
+    {
+      "id": 19,
+      "title": "Deep Learning in Cardiology"
+    },
+    {
+      "id": 20,
+      "title": "Using Machine Learning to Individualize Treatment Effect Estimation: Challenges and Opportunities"
+    },
+    {
+      "id": 21,
+      "title": "The Transformative Impact of Deep Learning on Personalized Medicine"
+    },
+    {
+      "id": 22,
+      "title": "Deep Learning in Medical Imaging: General Overview"
+    },
+    {
+      "id": 23,
+      "title": "Machine Learning as a Novel Method to Support Therapeutic Drug Management and Precision Dosing"
+    },
+    {
+      "id": 24,
+      "title": "Big Data to Knowledge: Application of Machine Learning to Predictive Modeling of Therapeutic Response in Cancer"
+    },
+    {
+      "id": 25,
+      "title": "Deep Learning and Its Applications in Biomedicine"
+    },
+    {
+      "id": 26,
+      "title": "Machine Learning Applied to Diagnosis of Human Diseases: A Systematic Review"
+    },
+    {
+      "id": 27,
+      "title": "Deep learning for healthcare: review, opportunities and challenges"
+    },
+    {
+      "id": 28,
+      "title": "Attention Is All You Need"
+    },
+    {
+      "id": 29,
+      "title": "Deep learning in systems medicine"
+    }
+  ],
+  "links": [
+    {
+      "source": 0,
+      "target": 2,
+      "similarity": 0.535669207572937
+    },
+    {
+      "source": 0,
+      "target": 4,
+      "similarity": 0.48487788438796997
+    },
+    {
+      "source": 0,
+      "target": 6,
+      "similarity": 0.5331400036811829
+    },
+    {
+      "source": 0,
+      "target": 8,
+      "similarity": 0.7654505372047424
+    },
+    {
+      "source": 0,
+      "target": 9,
+      "similarity": 0.7329758405685425
+    },
+    {
+      "source": 0,
+      "target": 10,
+      "similarity": 0.7269594669342041
+    },
+    {
+      "source": 0,
+      "target": 11,
+      "similarity": 0.7416827082633972
+    },
+    {
+      "source": 0,
+      "target": 12,
+      "similarity": 0.6324609518051147
+    },
+    {
+      "source": 0,
+      "target": 13,
+      "similarity": 0.7220577001571655
+    },
+    {
+      "source": 0,
+      "target": 17,
+      "similarity": 0.8612252473831177
+    },
+    {
+      "source": 0,
+      "target": 18,
+      "similarity": 0.5642597675323486
+    },
+    {
+      "source": 0,
+      "target": 19,
+      "similarity": 0.7294761538505554
+    },
+    {
+      "source": 0,
+      "target": 21,
+      "similarity": 0.6954020261764526
+    },
+    {
+      "source": 0,
+      "target": 22,
+      "similarity": 0.6108333468437195
+    },
+    {
+      "source": 0,
+      "target": 25,
+      "similarity": 0.7284657955169678
+    },
+    {
+      "source": 0,
+      "target": 26,
+      "similarity": 0.5483498573303223
+    },
+    {
+      "source": 0,
+      "target": 27,
+      "similarity": 0.6711645126342773
+    },
+    {
+      "source": 0,
+      "target": 29,
+      "similarity": 0.5863861441612244
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "similarity": 0.5101431012153625
+    },
+    {
+      "source": 1,
+      "target": 4,
+      "similarity": 0.4936861991882324
+    },
+    {
+      "source": 1,
+      "target": 6,
+      "similarity": 0.5408278703689575
+    },
+    {
+      "source": 1,
+      "target": 13,
+      "similarity": 0.4517821669578552
+    },
+    {
+      "source": 1,
+      "target": 16,
+      "similarity": 0.5661212205886841
+    },
+    {
+      "source": 1,
+      "target": 23,
+      "similarity": 0.45403188467025757
+    },
+    {
+      "source": 1,
+      "target": 24,
+      "similarity": 0.4570823311805725
+    },
+    {
+      "source": 1,
+      "target": 25,
+      "similarity": 0.48708969354629517
+    },
+    {
+      "source": 1,
+      "target": 26,
+      "similarity": 0.6154919862747192
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "similarity": 0.6419472098350525
+    },
+    {
+      "source": 2,
+      "target": 6,
+      "similarity": 0.6324869394302368
+    },
+    {
+      "source": 2,
+      "target": 7,
+      "similarity": 0.5851396322250366
+    },
+    {
+      "source": 2,
+      "target": 8,
+      "similarity": 0.6363901495933533
+    },
+    {
+      "source": 2,
+      "target": 9,
+      "similarity": 0.5040017366409302
+    },
+    {
+      "source": 2,
+      "target": 10,
+      "similarity": 0.6667786836624146
+    },
+    {
+      "source": 2,
+      "target": 11,
+      "similarity": 0.4673444628715515
+    },
+    {
+      "source": 2,
+      "target": 12,
+      "similarity": 0.575245201587677
+    },
+    {
+      "source": 2,
+      "target": 13,
+      "similarity": 0.52960604429245
+    },
+    {
+      "source": 2,
+      "target": 16,
+      "similarity": 0.6071966290473938
+    },
+    {
+      "source": 2,
+      "target": 17,
+      "similarity": 0.5880382657051086
+    },
+    {
+      "source": 2,
+      "target": 18,
+      "similarity": 0.6274184584617615
+    },
+    {
+      "source": 2,
+      "target": 19,
+      "similarity": 0.6359671950340271
+    },
+    {
+      "source": 2,
+      "target": 20,
+      "similarity": 0.4668201804161072
+    },
+    {
+      "source": 2,
+      "target": 21,
+      "similarity": 0.6582138538360596
+    },
+    {
+      "source": 2,
+      "target": 22,
+      "similarity": 0.47829920053482056
+    },
+    {
+      "source": 2,
+      "target": 23,
+      "similarity": 0.5559884309768677
+    },
+    {
+      "source": 2,
+      "target": 24,
+      "similarity": 0.5416170954704285
+    },
+    {
+      "source": 2,
+      "target": 25,
+      "similarity": 0.5997322201728821
+    },
+    {
+      "source": 2,
+      "target": 26,
+      "similarity": 0.5986042022705078
+    },
+    {
+      "source": 2,
+      "target": 27,
+      "similarity": 0.5646300315856934
+    },
+    {
+      "source": 2,
+      "target": 29,
+      "similarity": 0.6486594080924988
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "similarity": 0.6204432249069214
+    },
+    {
+      "source": 4,
+      "target": 7,
+      "similarity": 0.7031276822090149
+    },
+    {
+      "source": 4,
+      "target": 8,
+      "similarity": 0.5983783006668091
+    },
+    {
+      "source": 4,
+      "target": 9,
+      "similarity": 0.5471214056015015
+    },
+    {
+      "source": 4,
+      "target": 10,
+      "similarity": 0.7248009443283081
+    },
+    {
+      "source": 4,
+      "target": 11,
+      "similarity": 0.47480517625808716
+    },
+    {
+      "source": 4,
+      "target": 12,
+      "similarity": 0.6144345998764038
+    },
+    {
+      "source": 4,
+      "target": 13,
+      "similarity": 0.4997742772102356
+    },
+    {
+      "source": 4,
+      "target": 16,
+      "similarity": 0.8014228343963623
+    },
+    {
+      "source": 4,
+      "target": 17,
+      "similarity": 0.5593667030334473
+    },
+    {
+      "source": 4,
+      "target": 18,
+      "similarity": 0.6483668684959412
+    },
+    {
+      "source": 4,
+      "target": 19,
+      "similarity": 0.5964019298553467
+    },
+    {
+      "source": 4,
+      "target": 20,
+      "similarity": 0.5906119346618652
+    },
+    {
+      "source": 4,
+      "target": 21,
+      "similarity": 0.6926884055137634
+    },
+    {
+      "source": 4,
+      "target": 23,
+      "similarity": 0.6451572179794312
+    },
+    {
+      "source": 4,
+      "target": 24,
+      "similarity": 0.6401635408401489
+    },
+    {
+      "source": 4,
+      "target": 25,
+      "similarity": 0.6153126955032349
+    },
+    {
+      "source": 4,
+      "target": 26,
+      "similarity": 0.6830960512161255
+    },
+    {
+      "source": 4,
+      "target": 27,
+      "similarity": 0.7138988375663757
+    },
+    {
+      "source": 4,
+      "target": 29,
+      "similarity": 0.6851906776428223
+    },
+    {
+      "source": 6,
+      "target": 7,
+      "similarity": 0.6187739372253418
+    },
+    {
+      "source": 6,
+      "target": 8,
+      "similarity": 0.6307899951934814
+    },
+    {
+      "source": 6,
+      "target": 9,
+      "similarity": 0.4770052433013916
+    },
+    {
+      "source": 6,
+      "target": 10,
+      "similarity": 0.6355994939804077
+    },
+    {
+      "source": 6,
+      "target": 11,
+      "similarity": 0.5103463530540466
+    },
+    {
+      "source": 6,
+      "target": 12,
+      "similarity": 0.5975712537765503
+    },
+    {
+      "source": 6,
+      "target": 13,
+      "similarity": 0.6026487350463867
+    },
+    {
+      "source": 6,
+      "target": 16,
+      "similarity": 0.6307887434959412
+    },
+    {
+      "source": 6,
+      "target": 17,
+      "similarity": 0.5904010534286499
+    },
+    {
+      "source": 6,
+      "target": 18,
+      "similarity": 0.6369286775588989
+    },
+    {
+      "source": 6,
+      "target": 19,
+      "similarity": 0.5664469003677368
+    },
+    {
+      "source": 6,
+      "target": 20,
+      "similarity": 0.5099743604660034
+    },
+    {
+      "source": 6,
+      "target": 21,
+      "similarity": 0.695203423500061
+    },
+    {
+      "source": 6,
+      "target": 22,
+      "similarity": 0.5377259254455566
+    },
+    {
+      "source": 6,
+      "target": 23,
+      "similarity": 0.554638147354126
+    },
+    {
+      "source": 6,
+      "target": 24,
+      "similarity": 0.5122255086898804
+    },
+    {
+      "source": 6,
+      "target": 25,
+      "similarity": 0.5970443487167358
+    },
+    {
+      "source": 6,
+      "target": 26,
+      "similarity": 0.6894087791442871
+    },
+    {
+      "source": 6,
+      "target": 27,
+      "similarity": 0.5983408689498901
+    },
+    {
+      "source": 6,
+      "target": 29,
+      "similarity": 0.5973934531211853
+    },
+    {
+      "source": 7,
+      "target": 8,
+      "similarity": 0.5193953514099121
+    },
+    {
+      "source": 7,
+      "target": 10,
+      "similarity": 0.566757082939148
+    },
+    {
+      "source": 7,
+      "target": 12,
+      "similarity": 0.4709727168083191
+    },
+    {
+      "source": 7,
+      "target": 16,
+      "similarity": 0.6303313970565796
+    },
+    {
+      "source": 7,
+      "target": 17,
+      "similarity": 0.4610671103000641
+    },
+    {
+      "source": 7,
+      "target": 18,
+      "similarity": 0.6484613418579102
+    },
+    {
+      "source": 7,
+      "target": 19,
+      "similarity": 0.45592111349105835
+    },
+    {
+      "source": 7,
+      "target": 20,
+      "similarity": 0.5071892738342285
+    },
+    {
+      "source": 7,
+      "target": 21,
+      "similarity": 0.6115444898605347
+    },
+    {
+      "source": 7,
+      "target": 23,
+      "similarity": 0.6044147610664368
+    },
+    {
+      "source": 7,
+      "target": 24,
+      "similarity": 0.5565075874328613
+    },
+    {
+      "source": 7,
+      "target": 25,
+      "similarity": 0.5042582750320435
+    },
+    {
+      "source": 7,
+      "target": 26,
+      "similarity": 0.6518393158912659
+    },
+    {
+      "source": 7,
+      "target": 27,
+      "similarity": 0.5714830160140991
+    },
+    {
+      "source": 7,
+      "target": 29,
+      "similarity": 0.6157543063163757
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "similarity": 0.6442795395851135
+    },
+    {
+      "source": 8,
+      "target": 10,
+      "similarity": 0.7307012677192688
+    },
+    {
+      "source": 8,
+      "target": 11,
+      "similarity": 0.68683922290802
+    },
+    {
+      "source": 8,
+      "target": 12,
+      "similarity": 0.7520147562026978
+    },
+    {
+      "source": 8,
+      "target": 13,
+      "similarity": 0.700013279914856
+    },
+    {
+      "source": 8,
+      "target": 16,
+      "similarity": 0.5587013363838196
+    },
+    {
+      "source": 8,
+      "target": 17,
+      "similarity": 0.8182048201560974
+    },
+    {
+      "source": 8,
+      "target": 18,
+      "similarity": 0.6568210124969482
+    },
+    {
+      "source": 8,
+      "target": 19,
+      "similarity": 0.7088842391967773
+    },
+    {
+      "source": 8,
+      "target": 21,
+      "similarity": 0.8111732006072998
+    },
+    {
+      "source": 8,
+      "target": 22,
+      "similarity": 0.6443563103675842
+    },
+    {
+      "source": 8,
+      "target": 24,
+      "similarity": 0.47517630457878113
+    },
+    {
+      "source": 8,
+      "target": 25,
+      "similarity": 0.7406989336013794
+    },
+    {
+      "source": 8,
+      "target": 26,
+      "similarity": 0.5210145711898804
+    },
+    {
+      "source": 8,
+      "target": 27,
+      "similarity": 0.7470036745071411
+    },
+    {
+      "source": 8,
+      "target": 29,
+      "similarity": 0.667544424533844
+    },
+    {
+      "source": 9,
+      "target": 10,
+      "similarity": 0.6861979961395264
+    },
+    {
+      "source": 9,
+      "target": 11,
+      "similarity": 0.6632326245307922
+    },
+    {
+      "source": 9,
+      "target": 12,
+      "similarity": 0.5606675148010254
+    },
+    {
+      "source": 9,
+      "target": 13,
+      "similarity": 0.6127676963806152
+    },
+    {
+      "source": 9,
+      "target": 16,
+      "similarity": 0.4553455412387848
+    },
+    {
+      "source": 9,
+      "target": 17,
+      "similarity": 0.7044088840484619
+    },
+    {
+      "source": 9,
+      "target": 18,
+      "similarity": 0.5933510065078735
+    },
+    {
+      "source": 9,
+      "target": 19,
+      "similarity": 0.6334837079048157
+    },
+    {
+      "source": 9,
+      "target": 21,
+      "similarity": 0.6543612480163574
+    },
+    {
+      "source": 9,
+      "target": 22,
+      "similarity": 0.5164915919303894
+    },
+    {
+      "source": 9,
+      "target": 24,
+      "similarity": 0.544257402420044
+    },
+    {
+      "source": 9,
+      "target": 25,
+      "similarity": 0.6374955177307129
+    },
+    {
+      "source": 9,
+      "target": 26,
+      "similarity": 0.5080289840698242
+    },
+    {
+      "source": 9,
+      "target": 27,
+      "similarity": 0.5998028516769409
+    },
+    {
+      "source": 9,
+      "target": 29,
+      "similarity": 0.5298023223876953
+    },
+    {
+      "source": 10,
+      "target": 11,
+      "similarity": 0.650841474533081
+    },
+    {
+      "source": 10,
+      "target": 12,
+      "similarity": 0.7186601161956787
+    },
+    {
+      "source": 10,
+      "target": 13,
+      "similarity": 0.5993272066116333
+    },
+    {
+      "source": 10,
+      "target": 16,
+      "similarity": 0.5845977067947388
+    },
+    {
+      "source": 10,
+      "target": 17,
+      "similarity": 0.7277774810791016
+    },
+    {
+      "source": 10,
+      "target": 18,
+      "similarity": 0.6979248523712158
+    },
+    {
+      "source": 10,
+      "target": 19,
+      "similarity": 0.7445636987686157
+    },
+    {
+      "source": 10,
+      "target": 21,
+      "similarity": 0.7603512406349182
+    },
+    {
+      "source": 10,
+      "target": 22,
+      "similarity": 0.5665121674537659
+    },
+    {
+      "source": 10,
+      "target": 23,
+      "similarity": 0.5194666385650635
+    },
+    {
+      "source": 10,
+      "target": 24,
+      "similarity": 0.5773226022720337
+    },
+    {
+      "source": 10,
+      "target": 25,
+      "similarity": 0.7517555356025696
+    },
+    {
+      "source": 10,
+      "target": 26,
+      "similarity": 0.6214498281478882
+    },
+    {
+      "source": 10,
+      "target": 27,
+      "similarity": 0.8249748349189758
+    },
+    {
+      "source": 10,
+      "target": 28,
+      "similarity": 0.4662913382053375
+    },
+    {
+      "source": 10,
+      "target": 29,
+      "similarity": 0.7180936336517334
+    },
+    {
+      "source": 11,
+      "target": 12,
+      "similarity": 0.5362188816070557
+    },
+    {
+      "source": 11,
+      "target": 13,
+      "similarity": 0.7307448983192444
+    },
+    {
+      "source": 11,
+      "target": 17,
+      "similarity": 0.8081226348876953
+    },
+    {
+      "source": 11,
+      "target": 18,
+      "similarity": 0.5569428205490112
+    },
+    {
+      "source": 11,
+      "target": 19,
+      "similarity": 0.6430474519729614
+    },
+    {
+      "source": 11,
+      "target": 21,
+      "similarity": 0.6251088976860046
+    },
+    {
+      "source": 11,
+      "target": 22,
+      "similarity": 0.6210241317749023
+    },
+    {
+      "source": 11,
+      "target": 25,
+      "similarity": 0.7022783756256104
+    },
+    {
+      "source": 11,
+      "target": 26,
+      "similarity": 0.5156320333480835
+    },
+    {
+      "source": 11,
+      "target": 27,
+      "similarity": 0.6333082914352417
+    },
+    {
+      "source": 11,
+      "target": 29,
+      "similarity": 0.5536309480667114
+    },
+    {
+      "source": 12,
+      "target": 13,
+      "similarity": 0.5857468843460083
+    },
+    {
+      "source": 12,
+      "target": 16,
+      "similarity": 0.6411042213439941
+    },
+    {
+      "source": 12,
+      "target": 17,
+      "similarity": 0.6626894474029541
+    },
+    {
+      "source": 12,
+      "target": 18,
+      "similarity": 0.6145452857017517
+    },
+    {
+      "source": 12,
+      "target": 19,
+      "similarity": 0.6506552696228027
+    },
+    {
+      "source": 12,
+      "target": 21,
+      "similarity": 0.742117702960968
+    },
+    {
+      "source": 12,
+      "target": 22,
+      "similarity": 0.5287246704101562
+    },
+    {
+      "source": 12,
+      "target": 25,
+      "similarity": 0.6449732780456543
+    },
+    {
+      "source": 12,
+      "target": 26,
+      "similarity": 0.5015139579772949
+    },
+    {
+      "source": 12,
+      "target": 27,
+      "similarity": 0.7172070741653442
+    },
+    {
+      "source": 12,
+      "target": 29,
+      "similarity": 0.6024520397186279
+    },
+    {
+      "source": 13,
+      "target": 16,
+      "similarity": 0.4633212685585022
+    },
+    {
+      "source": 13,
+      "target": 17,
+      "similarity": 0.8132942914962769
+    },
+    {
+      "source": 13,
+      "target": 18,
+      "similarity": 0.5767171382904053
+    },
+    {
+      "source": 13,
+      "target": 19,
+      "similarity": 0.6354148387908936
+    },
+    {
+      "source": 13,
+      "target": 21,
+      "similarity": 0.6746827363967896
+    },
+    {
+      "source": 13,
+      "target": 22,
+      "similarity": 0.7885715961456299
+    },
+    {
+      "source": 13,
+      "target": 25,
+      "similarity": 0.7579392194747925
+    },
+    {
+      "source": 13,
+      "target": 26,
+      "similarity": 0.5848590135574341
+    },
+    {
+      "source": 13,
+      "target": 27,
+      "similarity": 0.6222202777862549
+    },
+    {
+      "source": 13,
+      "target": 29,
+      "similarity": 0.5900762677192688
+    },
+    {
+      "source": 16,
+      "target": 17,
+      "similarity": 0.4940730929374695
+    },
+    {
+      "source": 16,
+      "target": 18,
+      "similarity": 0.6049391031265259
+    },
+    {
+      "source": 16,
+      "target": 19,
+      "similarity": 0.5204529762268066
+    },
+    {
+      "source": 16,
+      "target": 20,
+      "similarity": 0.5592914819717407
+    },
+    {
+      "source": 16,
+      "target": 21,
+      "similarity": 0.6513206958770752
+    },
+    {
+      "source": 16,
+      "target": 23,
+      "similarity": 0.6013237237930298
+    },
+    {
+      "source": 16,
+      "target": 24,
+      "similarity": 0.6048293113708496
+    },
+    {
+      "source": 16,
+      "target": 25,
+      "similarity": 0.5138823986053467
+    },
+    {
+      "source": 16,
+      "target": 26,
+      "similarity": 0.6907304525375366
+    },
+    {
+      "source": 16,
+      "target": 27,
+      "similarity": 0.5738398432731628
+    },
+    {
+      "source": 16,
+      "target": 29,
+      "similarity": 0.6444862484931946
+    },
+    {
+      "source": 17,
+      "target": 18,
+      "similarity": 0.6252154111862183
+    },
+    {
+      "source": 17,
+      "target": 19,
+      "similarity": 0.7694525718688965
+    },
+    {
+      "source": 17,
+      "target": 21,
+      "similarity": 0.7680163383483887
+    },
+    {
+      "source": 17,
+      "target": 22,
+      "similarity": 0.6743580102920532
+    },
+    {
+      "source": 17,
+      "target": 25,
+      "similarity": 0.7618408203125
+    },
+    {
+      "source": 17,
+      "target": 26,
+      "similarity": 0.5775113701820374
+    },
+    {
+      "source": 17,
+      "target": 27,
+      "similarity": 0.7010548114776611
+    },
+    {
+      "source": 17,
+      "target": 29,
+      "similarity": 0.6337237358093262
+    },
+    {
+      "source": 18,
+      "target": 19,
+      "similarity": 0.6152781248092651
+    },
+    {
+      "source": 18,
+      "target": 21,
+      "similarity": 0.6949800252914429
+    },
+    {
+      "source": 18,
+      "target": 22,
+      "similarity": 0.513361930847168
+    },
+    {
+      "source": 18,
+      "target": 23,
+      "similarity": 0.5852634906768799
+    },
+    {
+      "source": 18,
+      "target": 24,
+      "similarity": 0.6022881865501404
+    },
+    {
+      "source": 18,
+      "target": 25,
+      "similarity": 0.6744292974472046
+    },
+    {
+      "source": 18,
+      "target": 26,
+      "similarity": 0.6010371446609497
+    },
+    {
+      "source": 18,
+      "target": 27,
+      "similarity": 0.7168392539024353
+    },
+    {
+      "source": 18,
+      "target": 29,
+      "similarity": 0.6713700294494629
+    },
+    {
+      "source": 19,
+      "target": 21,
+      "similarity": 0.700975775718689
+    },
+    {
+      "source": 19,
+      "target": 22,
+      "similarity": 0.5847654938697815
+    },
+    {
+      "source": 19,
+      "target": 24,
+      "similarity": 0.48762673139572144
+    },
+    {
+      "source": 19,
+      "target": 25,
+      "similarity": 0.7594777345657349
+    },
+    {
+      "source": 19,
+      "target": 26,
+      "similarity": 0.5431773662567139
+    },
+    {
+      "source": 19,
+      "target": 27,
+      "similarity": 0.7401023507118225
+    },
+    {
+      "source": 19,
+      "target": 29,
+      "similarity": 0.6535799503326416
+    },
+    {
+      "source": 20,
+      "target": 23,
+      "similarity": 0.5036427974700928
+    },
+    {
+      "source": 20,
+      "target": 24,
+      "similarity": 0.458728551864624
+    },
+    {
+      "source": 20,
+      "target": 26,
+      "similarity": 0.5057193040847778
+    },
+    {
+      "source": 20,
+      "target": 29,
+      "similarity": 0.4534257650375366
+    },
+    {
+      "source": 21,
+      "target": 22,
+      "similarity": 0.6231001019477844
+    },
+    {
+      "source": 21,
+      "target": 23,
+      "similarity": 0.5033110976219177
+    },
+    {
+      "source": 21,
+      "target": 24,
+      "similarity": 0.5809909105300903
+    },
+    {
+      "source": 21,
+      "target": 25,
+      "similarity": 0.7429932355880737
+    },
+    {
+      "source": 21,
+      "target": 26,
+      "similarity": 0.578360915184021
+    },
+    {
+      "source": 21,
+      "target": 27,
+      "similarity": 0.7241517305374146
+    },
+    {
+      "source": 21,
+      "target": 29,
+      "similarity": 0.6843783855438232
+    },
+    {
+      "source": 22,
+      "target": 25,
+      "similarity": 0.7017917633056641
+    },
+    {
+      "source": 22,
+      "target": 27,
+      "similarity": 0.6152706146240234
+    },
+    {
+      "source": 22,
+      "target": 29,
+      "similarity": 0.5489572286605835
+    },
+    {
+      "source": 23,
+      "target": 24,
+      "similarity": 0.5797121524810791
+    },
+    {
+      "source": 23,
+      "target": 25,
+      "similarity": 0.45880311727523804
+    },
+    {
+      "source": 23,
+      "target": 26,
+      "similarity": 0.5576567649841309
+    },
+    {
+      "source": 23,
+      "target": 27,
+      "similarity": 0.4915573000907898
+    },
+    {
+      "source": 23,
+      "target": 29,
+      "similarity": 0.5638635754585266
+    },
+    {
+      "source": 24,
+      "target": 25,
+      "similarity": 0.5211577415466309
+    },
+    {
+      "source": 24,
+      "target": 26,
+      "similarity": 0.5566844940185547
+    },
+    {
+      "source": 24,
+      "target": 27,
+      "similarity": 0.5555800199508667
+    },
+    {
+      "source": 24,
+      "target": 29,
+      "similarity": 0.5716325640678406
+    },
+    {
+      "source": 25,
+      "target": 26,
+      "similarity": 0.6190085411071777
+    },
+    {
+      "source": 25,
+      "target": 27,
+      "similarity": 0.7674236297607422
+    },
+    {
+      "source": 25,
+      "target": 29,
+      "similarity": 0.6521180868148804
+    },
+    {
+      "source": 26,
+      "target": 27,
+      "similarity": 0.5885514616966248
+    },
+    {
+      "source": 26,
+      "target": 29,
+      "similarity": 0.6295408010482788
+    },
+    {
+      "source": 27,
+      "target": 29,
+      "similarity": 0.7303268313407898
+    }
+  ]
+}

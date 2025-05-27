@@ -11,7 +11,7 @@ def load_graph(filename):
     with open(filename, "r", encoding="utf-8") as f:
         return json.load(f)
 
-data = load_graph("../app/output/paper_similarities.json")
+data = load_graph("./paper_similarities.json")
 
 papers = data["papers"]
 links = data["links"]
